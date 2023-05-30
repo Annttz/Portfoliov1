@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- given below is Font Awesome CDN link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="icon" type="image/png" href="img/logo.png"/>
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <title>Home</title>
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+      <div class="logo">Antoine Gilman</div>
+      <div class="navResponsive">
+         <ul class="navItems">
+            <li><a href="home.html" class="navlinks active">accueil</a></li>
+            <li><a href="a-propos.html" class="navlinks">A propos</a></li>
+            <li><a href="projets.html"class="navlinks">projets</a></li>
+            <li><a href="contact.html"class="navlinks">contact</a></li>
+         </ul>
+      </div>
+      <div class="burger">
+         <span></span>
+      </div>
+   </nav>
+   <!-- Fin Navbar -->
+
+   <!-- Début du corps -->
+    <section class="section">
+      <div class="section__container">
+        <div class="content" data-aos="fade-up" data-aos-duration="800">
+          <span class="topline">Bonjour,</span>
+          <br>
+            <h1>Je suis <span class="multiText"></span></h1>  
+            <br>
+            <br>
+            <p class="description">Je me présente, je m'appelle <b>Antoine</b> j'ai 26 ans ! J'ai commencé le développement web en 2020 et je suis passionné par la création d'expériences utilisateur. N'hésitez pas à me contacter si vous êtes interessé(e) pour la création de votre site web. 🎊</p>
+          <div class="btns" data-aos="zoom-in-up">
+               <a href="a-propos.html" target="_blank" class="coolbutton left"><i class="fa-solid fa-arrow-right"></i> en savoir plus</a>
+               <a href="contact.html" target="_blank" class="coolbutton right"> <i class="fa-solid fa-arrow-right"></i> contactez moi</a>
+         </div>
+        </div>
+        <div class="image" data-aos="fade-down" data-aos-duration="500">
+          <img src="./img/me.JPG" alt="profile" />
+        </div>
+      </div>
+    </section>
+   <!-- Fin du corps -->
+
+   <script>
+      var typingEffect = new Typed(".multiText",{
+         strings : ["developpeur front-end","freelancer"],
+         loop : true,
+         typeSpeed : 100,
+         backSpeed : 80,
+         backDelay : 1500
+      })
+      const menuHamburger = document.querySelector(".burger")
+      const navLinks = document.querySelector(".navItems")
+      const body = document.querySelector(".section") 
+
+      menuHamburger.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu')
+      })
+
+      const burger = document.querySelector('.burger');
+         burger.addEventListener('click', () => {
+         burger.classList.toggle('active');
+      });
+      var monElement = document.querySelector(".navlinks");
+
+		monElement.addEventListener("mouseover", function(event) {
+			event.target.classList.remove("active");
+		});
+
+		monElement.addEventListener("mouseout", function(event) {
+			event.target.classList.add("active");
+		});
+      
+      function toggleDisplay() {
+         if (body.style.display === "none") {
+            body.style.display = "flex"; // ou "inline", "flex", etc. selon le type d'élément
+         } else {
+            body.style.display = "none";
+         }
+      }
+
+      burger.addEventListener("click", toggleDisplay);
+   </script>
+   <script>
+        AOS.init();
+    </script>
+</body>
+</html>

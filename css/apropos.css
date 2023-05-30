@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'ricksonregular';
+    src: url('../fonts/rickson-webfont.woff2') format('woff2'),
+         url('../fonts/rickson-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'made_okine_sans_persMdoutline';
+    src: url('../fonts/madeokinesanspersonaluse-mediumoutline-webfont.woff2') format('woff2'),
+         url('../fonts/madeokinesanspersonaluse-mediumoutline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neueregular';
+    src: url('../fonts/NeuePowerTrial-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'made_okine_sans_personal_usMd';
+    src: url('../fonts/madeokinesanspersonaluse-medium-webfont.woff2') format('woff2'),
+         url('../fonts/madeokinesanspersonaluse-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'mogularegular';
+    src: url('../fonts/Mogula-8MWLM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'senilitaregular';
+    src: url('../fonts/Senilita.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rumitahregular';
+    src: url('../fonts/rumitah-webfont.woff2') format('woff2'),
+         url('../fonts/rumitah-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'ricksonregular';
+}
+body{
+   background-color: rgb(16, 34, 83);
+}
+::selection {
+    background: #404ca6;
+}
+/* Animation pour le logo */
+.logo {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: logo-anim 0.25s ease-out 0.5s forwards;
+  font-family: 'senilitaregular';
+  letter-spacing: 3px;
+}
+
+@keyframes logo-anim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation pour les liens de la navbar */
+.navItems li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: nav-anim 0.25s ease-out 0.5s forwards;
+}
+
+@keyframes nav-anim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fin de l'animation au lancement de la page */
+
+
+/* Règle général de la page d'acceuil  */
+nav{
+   display: flex;
+   width: 100%;
+   justify-content: space-around;
+   height: 80px;
+   line-height: 80px;
+   z-index: 2;
+}
+.logo{
+   display: flex;
+   font-size: 40px;
+   font-weight: 800;
+   color: wheat;
+}
+.navItems{
+   display: flex;
+}
+.navItems li{
+   list-style: none;
+   margin: 0 15px;
+}
+.navItems li a{
+   font-size: 25px;
+   color: wheat;
+   letter-spacing: 3px;
+   text-decoration: none;
+   text-transform: capitalize;
+   font-family: 'senilitaregular';
+}
+.navlinks {
+   position: relative;
+}
+.navlinks:hover::after {
+   content: '';
+   height: 5px;
+    width: 5px;
+    border-radius: 50px;
+    background: sandybrown;
+    position: absolute;
+    bottom: -12px;
+    left: calc(50% - 2.5px);
+    transition: all 0.3s ease 0s;
+    width: 40px;
+    animation: 1.3s ease-out 0s infinite va-et-vient;
+}
+.navlinks.active::after{
+   content: '';
+   height: 5px;
+    width: 5px;
+    border-radius: 50px;
+    background: sandybrown;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 2.5px);
+    transition: all 0.3s ease 0s;   
+}
+
+@keyframes va-et-vient {
+    0% {
+        left: 5px
+    }
+
+    50% {
+        left: -5px
+    }
+
+    to {
+        left: 5px
+    }
+}
+#text {
+  color:wheat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5% 15% 0%;
+  min-height: 60vh;
+}
+#text h1 {
+  color: sandybrown;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+#text b {
+  color: sandybrown;
+}
+#text p {
+  font-size: 22px;
+  font-family: 'mogularegular';
+}
+.btns {
+    display: flex;
+    transition-delay: 500ms;
+    position: relative;
+    padding-top: 2em;
+}
+.coolbutton {
+    color:sandybrown;
+    background-color: transparent;
+    border: 1px solid sandybrown;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    position: relative;
+    
+}
+.coolbutton:hover {
+  outline: none;
+  box-shadow: 4px 4px 0 0 sandybrown;
+  transform: translate(-5px, -5px);
+}
+hr {
+    width: 80%;
+    position: relative;
+    left:  10%;
+    margin-top: 32px;
+    margin-bottom: 0;
+    border-style: none;
+    border-bottom: 0;
+    border-top: 2px solid wheat;
+}
+.skills i {
+    margin: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    color: wheat;
+    font-size: 4em;
+    transition: all .1s ease-in-out;
+}
+
+/* .skills i:hover {
+    cursor: default;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+} */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 5;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.skill{
+  transition: all 0.3s;
+}
+.skill:nth-child(2) {
+  transition-delay: 200ms;
+}
+.skill:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.skill:nth-child(4) {
+  transition-delay: 600ms;
+}
+.skill:nth-child(5) {
+  transition-delay: 800ms;
+}
+.skill:nth-child(6) {
+  transition-delay: 1000ms;
+}
+.skill:nth-child(7) {
+  transition-delay: 1200ms;
+}
+.skill:nth-child(8) {
+  transition-delay: 1400ms;
+}
+.skill:nth-child(9) {
+  transition-delay: 1600ms;
+}
+.skill:nth-child(10) {
+  transition-delay: 1800ms;
+}
+.loisir ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+.loisir ul img {
+  width: 40%;
+  margin-bottom: 30px;
+}
+.loisir ul div {
+  transition: all .3s ease-in-out;
+}
+.loisir ul div:hover {
+    cursor: default;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
+}
+.loisir ul h3 {
+  font-family: 'mogularegular';
+}
+
+/* Format responsive */
+@media (width < 1050px) {
+   body {
+      overflow: hidden auto;
+   }
+   .navbar {
+      display: flex;
+      align-items: center;
+   }
+   .burger {
+   width: 42px;
+   height: 24px;
+   cursor: pointer;
+   position: relative;
+   display: none;
+   }
+   .burger span {
+   width: 100%;
+   height: 4px;
+   background-color: wheat;
+   display: block;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   transition: background-color 0.5s ease-in-out;
+   }
+   .burger span::before, .burger span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   background-color: wheat;
+   transition: transform 0.5s ease-in-out;
+   }
+   .burger span::before{
+   transform: translateY(-10px);
+   right: 20%;
+   }
+   .burger span::after{
+   transform: translateY(10px);
+   right: 15%;
+   }
+   .burger.active span{
+   background-color: transparent;
+   }
+   .burger.active span::before{
+   transform: translateY(0px) rotateZ(45deg);
+   }
+   .burger.active span::after{
+   transform: translateY(0px) rotateZ(-45deg);
+   }
+   .burger {
+      display: block;
+   }
+   nav {
+      display: flex;
+   }
+   .navItems {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(24, 68, 189, 0.168);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      margin-left: -100%;
+      transition: all 0.5s ease;
+   }
+   .mobile-menu {
+      margin-left: 0;
+      
+   } 
+   .navResponsive ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+   }
+   .navItems ul li {
+      margin : 25px 0;
+      font-size: 1.5em;
+   }
+  }

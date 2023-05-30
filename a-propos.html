@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/apropos.css">
+    <link rel="icon" type="image/png" href="img/craiyon_180222_chat_tabby_rose_pastel_faisant_du_skate_sur_la_lune_en_dessin_dans_une_forme_ronde_.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>À propos</title>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo">Antoine GILMAN</div>
+      <div class="navResponsive">
+         <ul class="navItems">
+            <li><a href="home.html" class="navlinks">accueil</a></li>
+            <li><a href="a-propos.html" class="navlinks active">a propos</a></li>
+            <li><a href="projets.html"class="navlinks">projets</a></li>
+            <li><a href="contact.html"class="navlinks">contact</a></li>
+         </ul>
+      </div>
+      <div class="burger">
+         <span></span>
+      </div>
+   </nav>
+
+   <div id="text" class="apropos" data-aos="zoom-in-down" data-aos-easing="linear"
+     data-aos-duration="500">
+      <h1 data-aos="fade-down-right" data-aos-duration="1500">A Propos</h1>
+      <br>
+      <p data-aos="fade-down-left" data-aos-duration="1500">Je m'appelle <b>Antoine</b>, je suis développeur web front-end. Originaire de Lyon, je suis toujours curieux d'en apprendre plus sur les nouvelles technologies et le <b>creative coding</b>.</p>
+      <br>
+      <p data-aos="zoom-in-up" data-aos-duration="1500">Passioné par <b>l'univers du numerique</b> depuis toujours, c'est en 2020 que je décide de me lancer dans l'aventure du développement web et d'entamer des études dans ce domaine.</p>
+      <br>
+      <div class="btns" data-aos="zoom-in-up" data-aos-duration="600">
+         <a href="./docs/cv.pdf" target="_blank" class="coolbutton"><b>  telecharger cv <i class="fa-solid fa-arrow-down"></i></b></a>
+      </div>      
+   </div>
+   <br>
+
+   <hr class="hrstyle">
+
+   <div id="text" class="competences" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1100">
+      <h1 data-aos="fade-down-right" data-aos-duration="1100">Competences</h1>
+      <br>
+      <br>
+      <br>
+      <p class="desc-skills" data-aos="fade-down-left" data-aos-duration="1100">Mon profil  touche à tout m’a amené à suivre différentes formations et à devenir un vrai couteau suisse du web. Je me concentre aujourd’hui sur le développement web et le webdesign et voici une idée de mon socle de compétences de langages et technos que j’utilise.</p>
+      <br>
+      <div class="skills" data-aos="zoom-in-up" data-aos-duration="500">
+         <i class="fa-brands fa-js skill hidden"></i>
+         <i class="fa-brands fa-react skill hidden"></i>
+         <i class="fa-brands fa-html5 skill hidden"></i>
+         <i class="fa-brands fa-css3 skill hidden"></i>
+         <i class="fa-brands fa-bootstrap skill hidden" ></i>
+         <i class="fa-brands fa-figma skill hidden"></i>
+         <i class="fa-brands fa-github skill hidden"></i>
+         <i class="fa-brands fa-wordpress skill hidden"></i>
+         <i class="fa-brands fa-php skill hidden"></i>
+      </div>     
+   </div>
+
+   <hr class="hrstyle2">
+
+   <div id="text" class="perso" data-aos="zoom-in-down" data-aos-easing="linear"
+     data-aos-duration="500">
+      <h1>Loisir</h1>
+      <br>
+      <p>Comme au niveau professionnel, pour mes loisirs, je reste  curieux et ouvert à la découverte ! Je ne me contente jamais d’une seule activité et je suis toujours avide de découvrir de nouvelles choses !</p>
+      <br>
+      <br>
+      <div class="loisir" data-aos="zoom-out-up" data-aos-duration="1500">
+         <ul>
+            <li>
+               <div>
+                  <img src="img/livre (1).png" alt="">
+                  <h3>Lecture</h3>
+               </div>
+            </li>
+            <li>
+               <div>
+                  <img src="img/haltere.png" alt="">
+                  <h3>Sport</h3>
+               </div>
+            </li>
+            <li>
+               <div>
+                  <img src="img/planche-a-roulette.png" alt="">
+                  <h3>Skate</h3>
+               </div>
+            </li>
+            <li>
+               <div>
+                  <img src="img/manette-de-jeu (1).png" alt="">
+                  <h3>Jeux videos</h3>
+               </div>
+            </li>
+            <li>
+               <div>
+                  <img src="img/randonnee.png" alt="">
+                  <h3>
+                     Rando
+                  </h3>
+               </div>
+            </li>
+            <li>
+               <div>
+                  <img src="img/internet.png" alt="">
+                  <h3>Culture web</h3>
+               </div>
+            </li>
+         </ul>
+      </div>      
+   </div>
+
+<script>
+   const menuHamburger = document.querySelector(".burger")
+   const navLinks = document.querySelector(".navItems")
+   const body = document.querySelector(".apropos")
+   const body2 = document.querySelector(".competences")
+   const body3 = document.querySelector(".hrstyle")
+   const body4 = document.querySelector(".hrstyle2")
+   const body5 = document.querySelector(".perso")
+   menuHamburger.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu')
+   })
+
+      const burger = document.querySelector('.burger');
+         burger.addEventListener('click', () => {
+         burger.classList.toggle('active');
+      });
+      var monElement = document.querySelector(".navlinks");
+
+		monElement.addEventListener("mouseover", function(event) {
+			event.target.classList.add("here");
+		});
+
+		monElement.addEventListener("mouseout", function(event) {
+			event.target.classList.remove("here");
+		});
+      function toggleDisplay() {
+         if (body.style.display === "none" && body2.style.display === "none") {
+            body.style.display = "flex";
+            body2.style.display = "flex";
+            body3.style.display = "flex";
+            body4.style.display = "flex";
+            body5.style.display = "flex"; // ou "inline", "flex", etc. selon le type d'élément
+         } else {
+            body.style.display = "none";
+            body2.style.display = "none";
+            body3.style.display = "none";
+            body4.style.display = "none";
+            body5.style.display = "none";
+         }
+      }
+      burger.addEventListener("click", toggleDisplay);
+      const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+   </script>
+<script>
+   AOS.init();
+</script>
+</body>
+</html>

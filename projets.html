@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/projets.css">
+    <link rel="icon" type="image/png" href="img/craiyon_180222_chat_tabby_rose_pastel_faisant_du_skate_sur_la_lune_en_dessin_dans_une_forme_ronde_.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Projets</title>
+</head>
+<body>
+    <!-- Navbar -->
+   <nav class="navbar">
+      <div class="logo">Antoine GILMAN</div>
+      <div class="navResponsive">
+         <ul class="navItems">
+            <li><a href="home.html" class="navlinks">accueil</a></li>
+            <li><a href="a-propos.html" class="navlinks">À propos</a></li>
+            <li><a href="projets.html" class="navlinks active">projets</a></li>
+            <li><a href="contact.html" class="navlinks">contact</a></li>
+         </ul>
+      </div>
+      <div class="burger">
+         <span></span>
+      </div>
+   </nav>
+   <!-- Fin Navbar -->
+
+    <h1 data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" data-aos-duration="500" data-aos-easing="ease-in-out" class="projets-text">Voici quelques uns des projets sur lesquels j’ai pu travailler.</h1>
+
+
+<div class="group">
+  <a href="https://mickaelmusiques.fr/" target="_blank" id="monLien"><div class="item" data-aos="zoom-out-right" data-aos-duration="900" style="background-image: url(img/mickaelmusiques.PNG)"></div></a>
+  <div class="item" data-aos="zoom-out-right"  data-aos-duration="900" style="background-image: url(https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60)"></div>
+  <div class="item" data-aos="zoom-out-right" data-aos-duration="900" style="background-image: url(https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cG9ydHJhaXR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60)"></div>
+  <div class="item" data-aos="zoom-out-right" data-aos-duration="900" style="background-image: url(https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60)"></div>
+  <div class="item" data-aos="zoom-out-right" data-aos-duration="900" style="background-image: url(https://images.unsplash.com/photo-1543357530-d91dab30fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTN8fHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60)"></div>
+</div>
+
+   <script>
+
+
+   const items = document.querySelectorAll('.item')
+const expand = (item, i) => {
+  items.forEach((it, ind) => {
+    if (i === ind) return
+    it.mouseenter = false
+  })
+  gsap.to(items, {
+    width: item.mouseleave ? '15vw' : '8vw',
+    duration: 2,
+    ease: 'elastic(1, .6)'
+  })
+  
+  item.mouseenter = !item.mouseenter
+  gsap.to(item, {
+    width: item.mouseenter ? '35vw' : '15vw',
+    duration: 2.5,
+    ease: 'elastic(1, .3)'
+  })
+}
+
+items.forEach((item, i) => {
+  item.mouseenter = false
+  item.addEventListener('mouseenter', () => expand(item, i))
+  item.addEventListener('mouseleave', () => expand(item, i))
+})
+      const menuHamburger = document.querySelector(".burger")
+      const navLinks = document.querySelector(".navItems")
+      const body = document.querySelector(".projets-text")
+      const body2 = document.querySelector(".group")
+
+      menuHamburger.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu')
+      })
+
+      const burger = document.querySelector('.burger');
+         burger.addEventListener('click', () => {
+         burger.classList.toggle('active');
+      });
+      var monElement = document.querySelector(".navlinks");
+
+		monElement.addEventListener("mouseover", function(event) {
+			event.target.classList.add("here");
+		});
+
+		monElement.addEventListener("mouseout", function(event) {
+			event.target.classList.remove("here");
+		});
+      function toggleDisplay() {
+         if (body.style.display === "none" && body2.style.display === "none") {
+            body.style.display = "flex";
+            body2.style.display = "flex"; // ou "inline", "flex", etc. selon le type d'élément
+         } else {
+            body.style.display = "none";
+            body2.style.display = "none";
+         }
+      }
+
+burger.addEventListener("click", toggleDisplay);
+
+
+
+</script>
+ <script>
+        AOS.init();
+    </script>
+</body>
+</html>

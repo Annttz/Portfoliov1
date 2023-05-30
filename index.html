@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- given below is Font Awesome CDN link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="icon" type="image/png" href="img/logo.png"/>
+   <title>Portfolio</title>
+</head>
+
+<!-- Animation au lancement de la page -->
+<div class="animation-container">
+   <div class="animation-wrapper">
+      <div class="animation-box"><img id="logobrand" src="./img/logo.png" alt="logo"></div>
+   </div>
+</div>
+<!-- Fin de l'animation au lancement de la page -->
+<script>
+    const animationContainer = document.querySelector('.animation-container');
+    setTimeout(() => {
+        animationContainer.classList.add('fade-out');
+
+        setTimeout(() => {
+            animationContainer.style.display = 'none';
+        }, 1000);
+    }, 2000);
+    setTimeout(function() {
+  window.location.href = 'home.html';
+}, 3000);
+</script>
+</html>
