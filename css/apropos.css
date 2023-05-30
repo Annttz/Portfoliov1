@@ -307,7 +307,6 @@ hr {
    .navbar {
       display: flex;
       text-align: center;
-      justify-content: space-between;
       align-items: center;
    }
    .burger {
@@ -385,3 +384,14 @@ hr {
       font-size: 1.5em;
    }
   }
+@media screen and (max-width: 420px) {
+      .navbar {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+   }
+   .logo{
+      font-size: 30px;
+   }
+}

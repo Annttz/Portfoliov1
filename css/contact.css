@@ -393,7 +393,6 @@ button:focus svg {
    .navbar {
       display: flex;
       text-align: center;
-      justify-content: space-between;
       align-items: center;
    }
    .burger {
@@ -483,4 +482,15 @@ button:focus svg {
     border-radius: 15px;
     box-sizing: border-box;
 }
+}
+@media screen and (max-width: 420px) {
+      .navbar {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+   }
+   .logo{
+      font-size: 30px;
+   }
 }
