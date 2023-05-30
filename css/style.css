@@ -298,7 +298,7 @@ p{
 
 
 /* Format responsive */
-@media (width < 1050px) {
+@media screen and (width < 1050px) {
    body {
       overflow: hidden auto;
    }
