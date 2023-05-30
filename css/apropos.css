@@ -300,12 +300,14 @@ hr {
 }
 
 /* Format responsive */
-@media (width < 1050px) {
+@media screen and (max-width: 1050px) {
    body {
       overflow: hidden auto;
    }
    .navbar {
       display: flex;
+      text-align: center;
+      justify-content: space-between;
       align-items: center;
    }
    .burger {
