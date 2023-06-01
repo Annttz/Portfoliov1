@@ -396,4 +396,7 @@ hr {
    .logo{
       font-size: 30px;
    }
+   .loisir ul li h3 {
+    font-size: 12px;
+   }
 }

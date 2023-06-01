@@ -411,8 +411,20 @@ p{
    .logo{
       font-size: 30px;
    }
-   .section {
-      position: relative;
-      right: 2%;
+   .topline {
+      font-size: 2em;
    }
+   .section  h1 {
+      font-size: 1em;
+   }
+   p {
+      font-size: 15px ;
+   }
+   .coolbutton {
+      font-size: 10px;
+   }
+   .image img {
+  width: min(15rem, 90%);
+
+}
 }
