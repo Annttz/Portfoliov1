@@ -65,6 +65,7 @@ body{
   animation: logo-anim 0.25s ease-out 0.5s forwards;
   font-family: 'senilitaregular';
   letter-spacing: 3px;
+  text-decoration: none;
 }
 
 @keyframes logo-anim {
@@ -216,7 +217,9 @@ nav{
 }
 #particules-js {
   height: 20%;
+  background-color: sandybrown;
 }
+
 section#contact {
   padding: 100px 0;
 }
@@ -385,6 +388,14 @@ button:focus svg {
 #icon {
     font-weight: 400 !important;
 }
+.swal-button, .swal-button:not([disabled]):hover {
+    background-color: #404ca6;
+}
+.swal-button:not([disabled]):hover {
+
+    box-shadow: 4px 4px 0 0 #909cf4;
+}
+
 /* Format responsive */
 @media screen and (max-width: 1050px) {
    body {
@@ -492,5 +503,11 @@ button:focus svg {
    }
    .logo{
       font-size: 30px;
+   }
+   #text h1 {
+      font-size: 1.5em;
+   }
+   #text p {
+      font-size: 19px;
    }
 }

@@ -63,6 +63,7 @@ body{
   animation: logo-anim 0.25s ease-out 0.5s forwards;
   font-family: 'senilitaregular';
   letter-spacing: 3px;
+  text-decoration: none;
 }
 
 @keyframes logo-anim {
@@ -297,6 +298,7 @@ hr {
 }
 .loisir ul h3 {
   font-family: 'mogularegular';
+  color: sandybrown;
 }
 
 /* Format responsive */

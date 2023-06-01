@@ -65,6 +65,7 @@ body{
   animation: logo-anim 0.25s ease-out 0.5s forwards;
   font-family: 'senilitaregular';
   letter-spacing: 3px;
+  text-decoration: none;
 }
 
 @keyframes logo-anim {
@@ -298,7 +299,7 @@ p{
 
 
 /* Format responsive */
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
    body {
       overflow: hidden auto;
    }
@@ -409,5 +410,9 @@ p{
    }
    .logo{
       font-size: 30px;
+   }
+   .section {
+      position: relative;
+      right: 2%;
    }
 }
