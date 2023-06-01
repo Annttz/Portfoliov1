@@ -386,7 +386,7 @@ hr {
       font-size: 1.5em;
    }
   }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 435px) {
       .navbar {
       display: flex;
       text-align: center;

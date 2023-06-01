@@ -277,7 +277,7 @@ h1 {
    }
 
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 435px) {
       .navbar {
       display: flex;
       text-align: center;
