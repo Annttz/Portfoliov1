@@ -221,7 +221,7 @@ nav{
 }
 
 section#contact {
-  padding: 100px 0;
+  padding-bottom: 100px;
 }
 
 section#contact .container {
@@ -500,6 +500,7 @@ button:focus svg {
       text-align: center;
       justify-content: space-between;
       align-items: center;
+      padding: 0px 15px;
    }
    .logo{
       font-size: 30px;
