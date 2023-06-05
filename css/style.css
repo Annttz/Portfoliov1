@@ -53,10 +53,33 @@
 }
 body{
    overflow: hidden;
-   background-color: rgb(16, 34, 83);
+   background-color: #102253;
 }
 ::selection {
     background: #404ca6;
+}
+.animation-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 200px;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+.animation-container img {
+   height: 60vh;
+   animation: zoom 2s ease-in-out;
+}
+@media screen and (max-width: 630px) {
+   .animation-container img {
+   height: 30vh;
+   }
 }
 /* Animation pour le logo */
 .logo {
@@ -171,7 +194,7 @@ nav{
    border-radius: 50%;
    left: -12%;
    top: 40%;
-   background: linear-gradient(300deg,#7340a6,sandybrown);
+   background: linear-gradient(300deg,#7340a6,#f4a460);
    animation: object1 6s linear infinite;
    z-index: -1;
 }
@@ -234,7 +257,7 @@ p{
    display: block;
    width: 100%;
    font-family: 'mogularegular';
-   color: wheat;
+   color: #f5deb3;
    font-size: 20px;
 }
 .btns {
