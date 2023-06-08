@@ -70,6 +70,29 @@ items.forEach((item, i) => {
   item.addEventListener('mouseenter', () => expand(item, i))
   item.addEventListener('mouseleave', () => expand(item, i))
 })
+const setResponsiveWidth = () => {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 1050) {
+    items.forEach((item) => {
+      item.style.width = '80vw';
+    });
+  } else if (screenWidth < 1200) {
+    items.forEach((item) => {
+      item.style.width = '50vw';
+    });
+  } else {
+    items.forEach((item) => {
+      item.style.width = '30vw';
+    });
+  }
+};
+
+// Call the setResponsiveWidth function on window resize
+window.addEventListener('resize', setResponsiveWidth);
+
+// Initial call to set the responsive width
+setResponsiveWidth();
       const menuHamburger = document.querySelector(".burger")
       const navLinks = document.querySelector(".navItems")
       const body = document.querySelector(".projets-text")
