@@ -444,6 +444,9 @@ p{
    p {
       font-size: 15px ;
    }
+   .btns {
+    left: 1%;
+}
    .coolbutton {
       font-size: 10px;
    }
