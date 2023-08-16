@@ -52,7 +52,7 @@
    font-family: 'ricksonregular';
 }
 body{
-   overflow: hidden auto;
+   overflow: hidden;
    background-color: rgb(16, 34, 83);
 }
 ::selection {
@@ -220,181 +220,91 @@ nav{
   background-color: sandybrown;
 }
 
-section#contact {
-  padding-bottom: 100px;
+
+
+@font-face {
+    font-family: 'Akira';
+    src:url('../fonts/akira_expanded_demo-webfont.woff2') format('woff2'),
+        url('../fonts/akira_expanded_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-section#contact .container {
-  max-width: 1000px;
-  margin: 0px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 30px 10px;
-  border-radius: 15px;
-  box-sizing: border-box;
-}
+@font-face {
+    font-family: 'tan_-_nimbusregular';
+    src: url('../fonts/tan-nimbus-webfont.woff2') format('woff2'),
+         url('../fonts/tan-nimbus-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-section#contact .container .title {
-  text-align: center;
 }
-
-section#contact .container form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 600px;
+.container {
+   /* position: relative; */
+    height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-section#contact .container form input {
-  width: 47%;
+.container p,a, h2 {
+    font-family: 'akira';
 }
-
-section#contact .container form input:hover,
-section#contact .container form textarea:hover {
-  border-bottom: 2px solid sandybrown;
+.container h1 {
+    font-family: 'tan_-_nimbusregular';
+    font-size: 42px;
 }
-
-section#contact .container form input,
-section#contact .container form textarea  {
-  margin: 10px 0;
-  padding: 10px;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #e4e4ec;
-  transition: 0.2s;
-  font-family: 'made_okine_sans_personal_usMd';
-  color: #404ca6;
+.glitch {
+    text-shadow: 
+    0.05em 0 0 rgb(0, 255, 255, 0.75), 
+    0.025em .05em 0 rgba(237, 51, 237, 0.75);
 }
-
-section#contact .container form textarea {
-  width: 100%;
-  margin-bottom: 50px;
-  resize: none;
-  height: 100px;
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-h1{
-   display: block;
-   font-size: 2em;
-   font-weight: 700;
-   color:rgba(16, 34, 83, 0.8);
+
+.card {
+    width: 700px;
+    height: 350px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
-@keyframes  object1{
-   50%{
-      left: -13%;
-      top: 41%;
-   }
-}
-@keyframes  object2{
-   50%{
-      right: -5%;
-      top: 10%;
-   }
-}
-.submit{
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
+.content-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: #2D5AAF;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: all 0.15s ease-out;
+    background: linear-gradient(260deg,#9558d2,#e0914c);
 }
 
-button {
-  width: 150px;
-  height: 50px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    background-color: transparent;
-    border: 1px solid sandybrown;
-    border-radius: 4px;
-    padding: 1.25rem 1.75rem;
-    font-size: 18px;
-    line-height: 1;
+.content-card img {
+    object-fit: cover;
+    width: 25%;
+    height: 25%;
+
+}
+.footer-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li,a {
+    font-size: 14px;
+    color: #2D5AAF;
     text-decoration: none;
-    font-family: 'ricksonregular';
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    margin-top: 10px;
-    position: relative;
+    list-style: none;
 }
 
-button:hover {
-   outline: none;
-  box-shadow: 4px 4px 0 0 sandybrown;
-  transform: translate(-5px, -5px);
-}
-span {
-  font-size: 15px;
-}
-span, svg {
-  position: absolute;
-  color: sandybrown;
-  fill: transparent;
-  transition: .4s;
-}
-
-
-
-button:focus {
-  outline: none;
-  box-shadow: none;
-  border: 2px solid transparent;
-  width: 50px;
-  border-left: 2px solid sandybrown;
-  border-bottom: 2px solid sandybrown;
-  animation: spin 2s 500ms forwards;
-}
-
-button:focus span {
-  color: transparent;
-}
-
-button:focus svg {
-  animation: check 500ms 2300ms forwards;
-}
-
-@keyframes spin {
-  80% {
-    border: 2px solid transparent;
-    border-left: 2px solid sandybrown;
-  }
-  100% {
-    transform: rotate(1080deg);
-    border: 2px solid sandybrown;
-  }
-}
-
-@keyframes check {
-  to {
-    fill: sandybrown;
-  }
-}
-
-@keyframes circle {
-  to {
-    border: 2px solid sandybrown;
-  }
-}
-#icon {
-    font-weight: 400 !important;
-}
-.swal-button, .swal-button:not([disabled]):hover {
-    background-color: #404ca6;
-}
-.swal-button:not([disabled]):hover {
-
-    box-shadow: 4px 4px 0 0 #909cf4;
-}
 
 /* Format responsive */
 @media screen and (max-width: 1050px) {
@@ -494,6 +404,55 @@ button:focus svg {
     box-sizing: border-box;
 }
 }
+@media screen and (max-width: 782px) {
+  .card {
+    width: 580px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  .card {
+    width: 500px;
+    height: 300px;
+  }
+  .container h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 527px) {
+  .card {
+    width: 400px;
+    height: 250px;
+  }
+  .container h1 {
+    font-size: 25px;
+  }
+  .container h2 {
+    font-size: 15px;
+  }
+  .container li,a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 483px) {
+  .card {
+    width: 350px;
+    height: 215px;
+  }
+  .container h1 {
+    font-size: 25px;
+  }
+  .container h2 {
+    font-size: 15px;
+  }
+  .container li,a {
+    font-size: 9px;
+  }
+}
+
 @media screen and (max-width: 435px) {
       .navbar {
       display: flex;
@@ -506,9 +465,22 @@ button:focus svg {
       font-size: 30px;
    }
    #text h1 {
-      font-size: 1.5em;
+      font-size: 2em;
    }
    #text p {
-      font-size: 19px;
+      font-size: 20px;
    }
+   .card {
+    width: 350px;
+    height: 215px;
+  }
+  .container h1 {
+    font-size: 25px;
+  }
+  .container h2 {
+    font-size: 15px;
+  }
+  .container li,a {
+    font-size: 9px;
+  }
 }

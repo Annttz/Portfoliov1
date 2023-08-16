@@ -1,38 +1,23 @@
-function sendMail() {
+const card = document.querySelectorAll(".card")
+const title = document.querySelector('.glitch');
 
-  var name = document.getElementById("name").value;
-  var message = document.getElementById("message").value;
+card.forEach(el => {
+    el.addEventListener('mousemove', e => {
+        let elRect = el.getBoundingClientRect()
 
-  const serviceID = "service_codhxyd";
-  const templateID = "template_d19lxsx";
-  const regExEmail = (value) => {
-    return /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value);
-  }
+        let x = e.clientX - elRect.x
+        let y = e.clientY - elRect.y
 
-  function emailControl() {
-    const leMail = document.getElementById("email").value;
-    if (regExEmail(leMail)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+        let midCardWidth = elRect.width / 2
+        let midCardHeight = elRect.height / 2
 
-  $('#myForm').on('submit', function (event) {
-    event.preventDefault();
-  });
+        let angleY = -(x - midCardWidth) / 8
+        let angleX = (y - midCardHeight) / 8
+        el.children[0].style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`
+      title.style.transform = "translateX(200)"
+    })
 
-  if (name != "" && emailControl() != false && message != "") {
-    const params = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value
-    };
-
-    emailjs.send(serviceID, templateID, params);
-    
-  } else {
-      swal("🤔", "Votre message ne c'est pas envoye! Verifier les champs.", "error");
-  }
-
-}
+    el.addEventListener('mouseleave', () => {
+        el.children[0].style.transform = "rotateX(0) rotateY(0)"
+    })
+})

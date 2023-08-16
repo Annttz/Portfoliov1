@@ -6,17 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <link rel="stylesheet" href="css/contact.css">
-   <link rel="icon" type="image/png" href="./asset/logo.png"/>
-   <script src="main.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("v0uKz-8FPrO5_9YSY");
-        })();
-    </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-   <link rel="icon" type="image/png" href="img/splash.png"/>
+   <link rel="icon" type="image/png" href="./asset/logo.png"/>   
    <title>Antoine Gilman - Contact</title>
 </head>
 <body>
@@ -42,24 +32,26 @@
             <p>Je peux vous accompagner dans la réalisation de <b>votre projet</b> sur le web. Je mets mes compétences à votre service pour vous aider dans la concrétisation de <b>vos objectifs</b> !</p>    
         </div>
       </div>
-      
-      <section id="contact" class="contact">
-            <div class="container">
-                <div class="title">
-                    <h1>Formulaire de contact</h1>
+
+      <div class="container ">
+        <div class="card hidden">
+            <div class="content-card">
+                <div>
+                        <a href="mailto:hi.itsantzz@gmail.com"><h1 class="glitch">WEB DEVELOPPEUR</h1></a>
+                        <br>
+                        <a href="mailto:hi.itsantzz@gmail.com"><h2 class="glitch">ANTOINE GILMAN</h2></a>
+                        <br>
+                        <a href="mailto:hi.itsantzz@gmail.com"><img src="./asset/Frame_41.png" alt="logo"></a>
+                    
+                    <div class="footer-card">
+                         <a href="mailto:hi.itsantzz@gmail.com"><p>07.67.74.69.81</p></a>
+                        <a href="mailto:hi.itsantzz@gmail.com">hi.itsantzz@gmail.com</a>
+                    </div>
                 </div>
-                <form id="myForm">
-                    <input type="text" name="name" id="name" placeholder="Entrer votre nom" required>
-                    <input type="email" name="email" id="email" placeholder="Entrer votre e-mail" required>
-                    <textarea name="message" id="message" placeholder="Entrer votre message" required></textarea>
-                    <button class="submit" onclick="sendMail()"><span>Envoyer <i id="icon" class="fa-solid fa-paper-plane"></i></span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
-      </svg>
-                    </button>
-                </form>
             </div>
-      </section>
+        </div>
+    </div>
+      
 
 
       <script>
@@ -92,7 +84,7 @@ hiddenElementsleft.forEach((el) => observerleft.observe(el));
       const menuHamburger = document.querySelector(".burger")
       const navLinks = document.querySelector(".navItems")
       const body = document.querySelector(".hidden")
-      const body2 = document.querySelector(".contact")  
+      const body2 = document.querySelector(".container")  
 
       menuHamburger.addEventListener('click',()=>{
       navLinks.classList.toggle('mobile-menu')
@@ -125,5 +117,6 @@ burger.addEventListener("click", toggleDisplay);
 </script>
 <script type="text/javascript" src="particles.js"></script>
 <script src="app.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
