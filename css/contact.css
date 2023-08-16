@@ -475,8 +475,11 @@ li,a {
       font-size: 1.5em;
    }
    #text p {
-      font-size: 20px;
+      font-size: 15px;
    }
+   #particles-js {
+    height: 40vh;
+  }
    .card {
     width: 350px;
     height: 215px;
