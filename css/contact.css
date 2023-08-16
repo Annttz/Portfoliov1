@@ -458,8 +458,7 @@ li,a {
     overflow: hidden auto;
   }
   .container {
-    position: relative;
-    top: 120px;
+    height: auto;
     padding-bottom: 25px;
   }
   .navbar {
@@ -493,5 +492,15 @@ li,a {
   }
   .container li,a {
     font-size: 9px;
+  }
+}
+@media screen and (max-width: 385px) {
+.container {
+    position: relative;
+    top: 130px;
+    padding-bottom: 25px;
+  }
+  .content-card {
+    padding: 35px;
   }
 }
