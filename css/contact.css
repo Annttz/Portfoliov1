@@ -458,7 +458,7 @@ li,a {
     overflow: hidden auto;
   }
   .container {
-    height: auto;
+    height: 1vh;
     padding-bottom: 25px;
   }
   .navbar {
@@ -494,8 +494,9 @@ li,a {
     font-size: 9px;
   }
 }
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 375px) {
 .container {
+    height: auto;
     position: relative;
     top: 130px;
     padding-bottom: 25px;
