@@ -458,7 +458,8 @@ li,a {
     overflow: hidden auto;
   }
   .container {
-    height: 10px;
+    position: relative;
+    top: 100px;
     padding-bottom: 25px;
   }
   .navbar {
