@@ -454,7 +454,14 @@ li,a {
 }
 
 @media screen and (max-width: 435px) {
-      .navbar {
+  body {
+    overflow: hidden auto;
+  }
+  .container {
+    height: auto;
+    padding-bottom: 25px;
+  }
+  .navbar {
       display: flex;
       text-align: center;
       justify-content: space-between;
