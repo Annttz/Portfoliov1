@@ -274,21 +274,7 @@ nav{
     transform: translateY(0);
   }
 }
-/* .color-arrow{
-  color:wheat !important;
-} */
-.arrow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.arrow {
-  animation: moveArrow 2s ease-in-out infinite;
-}
-img {
-  height: 5vh;
-}
 .card {
     width: 700px;
     height: 350px;
