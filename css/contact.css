@@ -263,9 +263,32 @@ nav{
     padding: 0;
     box-sizing: border-box;
 }
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* .color-arrow{
+  color:wheat !important;
+} */
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
-
+.arrow {
+  animation: moveArrow 2s ease-in-out infinite;
+}
+img {
+  height: 5vh;
+}
 .card {
     width: 700px;
     height: 350px;
