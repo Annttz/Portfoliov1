@@ -1,124 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-down.css' rel='stylesheet'>
-   <link rel="stylesheet" href="css/contact.css">
-   <link rel="icon" type="image/png" href="./asset/logo.png"/>   
-   <title>Antoine Gilman - Contact</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@600&f[]=clash-display@600,1&f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/contact.css">
+    <link href="https://fonts.cdnfonts.com/css/rickson" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/logo.png"/>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("v0uKz-8FPrO5_9YSY");
+        })();
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Antoine Gilman | Contact</title>
 </head>
 <body>
-      <nav class="navbar">
-         <a href="index.html" class="logo">Antoine Gilman</a>
-         <div class="navResponsive">
-         <ul class="navItems">
-            <li><a href="index.html" class="navlinks">accueil</a></li>
-            <li><a href="a-propos.html" class="navlinks">À propos</a></li>
-            <li><a href="projets.html" class="navlinks">projets</a></li>
-            <li><a href="contact.html" class="navlinks active">contact</a></li>
-         </ul>
-         </div>
-         <div class="burger">
-            <span></span>
-         </div>
-      </nav>
 
-       <div id="particles-js">
-        <div id="text" class="hidden">
-            <h1>Vous avez besoin d'un site web ?</h1>
-            <br>
-            <p>Je peux vous accompagner dans la réalisation de <b>votre projet</b> sur le web. Je mets mes compétences à votre service pour vous aider dans la concrétisation de <b>vos objectifs</b> !</p>
-            <br>
-            <br>
-        </div>
-      </div>
+   <div class="header-nav">
+			<a href="index.html" class="logo" data-aos="zoom-out-down" data-aos-duration="1000" data-aos-delay="300">
+				<img src="./img/logo.png" alt="logo">   
+			</a>
+			<a href="index.html" data-aos="zoom-out-down" data-aos-duration="1000" data-aos-delay="300"><span class="btn contact-btn">home</span></a>
+		</div>
 
-      <div class="container ">
-        <div class="card hidden">
-            <div class="content-card">
-                <div>
-                        <a href="mailto:hi.itsantzz@gmail.com"><h1 class="glitch">WEB DEVELOPPEUR</h1></a>
-                        <br>
-                        <a href="mailto:hi.itsantzz@gmail.com"><h2 class="glitch">ANTOINE GILMAN</h2></a>
-                        <br>
-                        <a href="mailto:hi.itsantzz@gmail.com"><img src="./asset/Frame_41.png" alt="logo"></a>
-                    
-                    <div class="footer-card">
-                         <a href="mailto:hi.itsantzz@gmail.com"><p>07.67.74.69.81</p></a>
-                        <a href="mailto:hi.itsantzz@gmail.com">hi.itsantzz@gmail.com</a>
-                    </div>
+    <section class="contact" id="contact">
+        <h1 class="title-contact"><span class="stroke">CONT</span><span>ACT</span></h1>
+        <div class="div-contact">
+            <div class="container" data-aos="fade-right" data-aos-duration="500" data-aos-delay="800">
+                <div class="contact-presentation">
+                    <h1 class="title-presentation">Vous avez un <span>pro</span><span  class="stroke">jet</span> ?</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Je peux vous accompagner dans la réalisation de <b>votre projet</b>. Je mets mes compétences à votre service pour vous aider dans la concrétisation de <b>vos idees</b> !</p>
                 </div>
+                <br>
+                <br>
+                <br>
+                <form id="myForm">
+                    <input type="text" name="name" id="name" autocomplete="name" placeholder="Entrer votre nom" required>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Entrer votre e-mail" required>
+                    <textarea name="message" id="message" placeholder="Entrer votre message" required></textarea>
+                    <button class="submit" type="button" onclick="sendMail()"><span class="span-submit">Envoyer</span></button>
+                </form>
             </div>
         </div>
-    </div>
-      
+    <script src="/js/contact.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        const myText = new SplitType('.title-contact')
 
-
-      <script>
-         const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
-const observerleft = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('showleft');
-        } else {
-            entry.target.classList.remove('showleft');
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
-
-const hiddenElementsleft = document.querySelectorAll('.contact');
-hiddenElementsleft.forEach((el) => observerleft.observe(el));
-
-   
-      const menuHamburger = document.querySelector(".burger")
-      const navLinks = document.querySelector(".navItems")
-      const body = document.querySelector(".hidden")
-      const body2 = document.querySelector(".container")  
-
-      menuHamburger.addEventListener('click',()=>{
-      navLinks.classList.toggle('mobile-menu')
-      })
-
-      const burger = document.querySelector('.burger');
-         burger.addEventListener('click', () => {
-         burger.classList.toggle('active');
-      });
-      var monElement = document.querySelector(".navlinks");
-
-		monElement.addEventListener("mouseover", function(event) {
-			event.target.classList.remove("here");
-		});
-
-		monElement.addEventListener("mouseout", function(event) {
-			event.target.classList.add("here");
-		});
-      function toggleDisplay() {
-         if (body.style.display === "none" && body2.style.display === "none") {
-            body.style.display = "flex";
-            body2.style.display = "flex"; // ou "inline", "flex", etc. selon le type d'élément
-         } else {
-            body.style.display = "none";
-            body2.style.display = "none";
-         }
-      }
-
-burger.addEventListener("click", toggleDisplay);
-</script>
-<script type="text/javascript" src="particles.js"></script>
-<script src="app.js"></script>
-<script src="main.js"></script>
-</body>
+        gsap.to('.char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.2,
+            duration: .1
+        })
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body> 
 </html>

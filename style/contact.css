@@ -1,0 +1,180 @@
+::selection {
+  background: #606887;
+}
+* {
+	box-sizing: border-box;
+	font-family: 'Syne', sans-serif;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+body {
+	background: #1F1926;
+    overflow: hidden;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.75rem;
+    padding-left: 4.75rem;
+    padding-right: 4.75rem;
+    margin-bottom: 100px;
+}
+.logo img {
+   width: 100px;
+   height: 100px;
+}
+.contact-btn {
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #FCF7FF;
+}
+.btn {
+  border-radius: 9999999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #FCF7FF;
+  border-radius: 99999px;
+  padding: .5rem 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1); 
+  position: relative;
+}
+
+.btn:hover {
+  outline: none;
+  box-shadow: 5px 5px 0 0 #FCF7FF;
+  transform: translate(-5px, -5px);
+}
+h1,a {
+    color: white;
+    text-decoration: none;
+}
+section#contact {
+  height: 100vh;
+  padding:  0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact .title-contact {
+    font-size: 7rem;  
+    line-height: 5.9rem;
+    margin-bottom: 100px;
+}
+
+.title-contact .stroke {
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+}
+.char {
+    transform: translateY(115px);
+    transition: transform .5s;
+}
+.title-presentation .stroke {
+	color: transparent;
+	-webkit-text-stroke: 1px #FFBBFF;
+}
+b {
+	color: #FFBBFF;
+	font-family: 'Rickson', sans-serif;
+	font-size: 20px;
+
+}
+.title-presentation {
+  line-height: 1.25;
+  font-size: 3.2rem;
+  color: #FFBBFF;
+}
+::placeholder {
+    color: white;
+}
+section#contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:  10px;
+  box-sizing: border-box;
+}
+
+section#contact .container p {
+  font-size: 20px;
+  color: white;
+}
+section#contact .container form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+
+section#contact .container form input {
+  width: 47%;
+  background-color: transparent;
+ 
+}
+section#contact .container form textarea {
+   background-color: transparent;
+   border-bottom: 2px solid white; 
+}
+
+section#contact .container form input,
+section#contact .container form textarea  {
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+section#contact .container form textarea {
+  width: 100%;
+  margin-bottom: 50px;
+  resize: none;
+  height: 100px;
+}
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 9999999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 99999px;
+  padding: 1.25rem 1.75rem;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  margin-top: 10px;
+  position: relative;
+}
+
+button:hover {
+  outline: none;
+  box-shadow: 4px 4px 0 0 white;
+  transform: translate(-5px, -5px);
+}
+.contact .span-submit {
+  font-size: 15px;
+}
+.contact .span-submit {
+  position: absolute;
+  color: white;
+  fill: transparent;
+  transition: .4s;
+}
+
+.swal-button, .swal-button:not([disabled]):hover {
+  background-color: #a4a4a1;
+}

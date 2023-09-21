@@ -1,100 +1,294 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- given below is Font Awesome CDN link -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="icon" type="image/png" href="./asset/logo.png"/>
-   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <title>Antoine Gilman - Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Antoine Gilman | Frontend Developer & Designer</title>
+	<link rel="icon" href="img/logo.png" type="icon/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+	<link href="https://api.fontshare.com/v2/css?f[]=general-sans@600&f[]=clash-display@600,1&f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/rickson" rel="stylesheet">
+	<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-   <!-- Navbar -->
-   <nav class="navbar">
-     <a href="index.html" class="logo">Antoine Gilman</a>
-      <div class="navResponsive">
-         <ul class="navItems">
-            <li><a href="index.html" class="navlinks active">accueil</a></li>
-            <li><a href="a-propos.html" class="navlinks">A propos</a></li>
-            <li><a href="projets.html"class="navlinks">projets</a></li>
-            <li><a href="contact.html"class="navlinks">contact</a></li>
-         </ul>
-      </div>
-      <div class="burger">
-         <span></span>
-      </div>
-   </nav>
-   <!-- Fin Navbar -->
 
-   <!-- Début du corps -->
-    <section class="section">
-      <div class="section__container">
-        <div class="content" data-aos="fade-up" data-aos-duration="800">
-          <span class="topline">Bonjour,</span>
-          <br>
-            <h1>Je suis <span class="multiText"></span></h1>  
-            <br>
-            <br>
-            <p class="description">Je me présente, je m'appelle <b>Antoine</b> j'ai 26 ans ! J'ai commencé le développement web en 2020 et je suis passionné par la création d'expériences utilisateur. N'hésitez pas à me contacter si vous êtes interessé(e) pour la création de votre site web.</p>
-          <div class="btns" data-aos="zoom-in-up">
-               <a href="a-propos.html" class="coolbutton left"><i class="fa-solid fa-arrow-right"></i> en savoir plus</a>
-               <a href="contact.html" class="coolbutton right"> <i class="fa-solid fa-arrow-right"></i> contactez moi</a>
-         </div>
-        </div>
-        <div class="image" data-aos="fade-down" data-aos-duration="800">
-          <img src="./asset/me.jpeg" alt="profile" />
-        </div>
-      </div>
-    </section>
-   <!-- Fin du corps -->
+	<!-- div .wrapp -->
+	<div id="luxy" class="wrapp">
 
-   <script>
-      var typingEffect = new Typed(".multiText",{
-         strings : ["developpeur front-end","web-designer","freelancer"],
-         loop : true,
-         typeSpeed : 100,
-         backSpeed : 80,
-         backDelay : 1500
-      })
-      const menuHamburger = document.querySelector(".burger")
-      const navLinks = document.querySelector(".navItems")
-      const body = document.querySelector(".section") 
+		<div class="header-nav">
+			<a href="index.html" class="logo" data-aos="zoom-out-down" data-aos-duration="1000" data-aos-delay="300">
+				<img src="./img/logo.png" alt="logo">   
+			</a>
+			<a href="contact.html" data-aos="zoom-out-down" data-aos-duration="1000" data-aos-delay="300"><span class="btn contact-btn">contact</span></a>
+		</div>
+		<!-- div .header -->
+		<header class="header">
+			<div class="hero-text">
+				<h1 class="title" data-splitting><span class="title_paralax stroke">HEY, JE SUIS</span> <span> ANTOINE GILMAN</span></h1>
+				<h1 class="title2" data-splitting data-aos="fade-down" data-aos-duration="900" data-aos-delay="700"><span class="title_paralax stroke">MAIS VOUS POUVEZ M'APPELER</span> <span> ANTZZ</span></h1>
+				<div class="hero-roles">
+                    <h2>Je suis <span class="multiText"></span></h2>
+                </div>
+			</div>
+			<div class="circle">
+                <div class="text-rounded">
+                    <p>SCROLL - SCROLL - SCROLL - SCROLL - SCROLL</p>				
+                </div>
+				<ion-icon name="arrow-down"></ion-icon>
+			</div> 
+		
+			<div class="header__marq">
+				<div class="header__marq-wrapp">
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+				</div>
+			</div>
+		</header>
 
-      menuHamburger.addEventListener('click',()=>{
-      navLinks.classList.toggle('mobile-menu')
-      })
+		<main class="main">
 
-      const burger = document.querySelector('.burger');
-         burger.addEventListener('click', () => {
-         burger.classList.toggle('active');
-      });
-      var monElement = document.querySelector(".navlinks");
+			<!-- div .about -->
+			<section class="about">
+				<div class="about__wrapp">
+					<div class="about__img">
+						<img src="img/me.jfif" alt="2">
+					</div>
+					<div class="about__txt">
+						<h2 class="section-title">à pro<span class="stroke">pos</span>
+							<span class="section-title__square"></span>
+						</h2>
+						<p class="about__p">Je me présente, je m'appelle <b>Antoine</b> j'ai 26 ans ! Je suis originaire de Lyon et toujours curieux d'en apprendre plus sur les nouvelles technologies et le <b>creative coding</b>. Passioné par <b>l'univers du numerique</b> depuis toujours, c'est en 2020 que je décide de me lancer dans <b>l'aventure du développement web</b> et d'entamer des études dans ce domaine. <br> <br> N'hésitez pas à me contacter si vous êtes interessé(e) pour la création de votre site web.</p>
+						<div class="btns" data-aos="fade-up-left" data-aos-duration="1000" data-aos-delay="1000">
+         					<a href="./img/CV_ANTOINE_GILMAN.pdf" target="_blank" class="btn cv"> telecharger cv</a>
+      					</div> 
+					</div>
+				</div>
+			</section>
 
-		monElement.addEventListener("mouseover", function(event) {
-			event.target.classList.remove("active");
-		});
+			<!-- div .benefits -->
+			<section class="benefits">
+				<div class="content">
+					<h2 class="section-title">compét<span class="stroke">ences</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<p class="skills-desc">Je me concentre aujourd’hui sur <b>le développement web et le webdesign</b> et voici une idée de mon socle de compétences de <b>langages et technos</b> que j’utilise.</p>
+					<ul class="benefits__list">
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-200">/HTML</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/CSS</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/JAVASCRIPT</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-200">/JQUERY</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/REACT JS</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-210">/BOOTSTRAP</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-200">/FIGMA</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-450">/GIT</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-250">/GSAP</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/WORDPRESS</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-350">/PHP</span>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/AOS</span>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-		monElement.addEventListener("mouseout", function(event) {
-			event.target.classList.add("active");
-		});
-      
-      function toggleDisplay() {
-         if (body.style.display === "none") {
-            body.style.display = "flex"; // ou "inline", "flex", etc. selon le type d'élément
-         } else {
-            body.style.display = "none";
-         }
-      }
+			<!-- div .work -->
+			<section class="work">
+				<div class="content">
+					<h2 class="section-title">pro<span class="stroke">jets</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<p class="projets-desc">Voici quelques uns des <b>projets</b> sur lesquels j’ai pu travailler.</p>
+				</div>
 
-      burger.addEventListener("click", toggleDisplay);
-   </script>
-   <script>
-        AOS.init();
-    </script>
+				<div class="work__wrapp">
+					<div class="work__item" data-speed="-300">
+						<span class="work__item-num" data-speed="-1000">/001</span>
+						<div class="work__item-img">
+							<a href="https://annttz.github.io/AMDesign/" target="_blank"><img src="img/Capture.PNG" alt="3"></a>
+						</div>
+					</div>
+					<div class="work__item" data-speed="-600">
+						<span class="work__item-num" data-speed="-500">/002</span>
+						<div class="work__item-img">
+							<a href="https://mickaelmusiques.fr/" target="_blank"><img src="img/2.PNG" alt="3"></a>
+						</div>
+					</div>
+					<!-- <div class="work__item" data-speed="-700">
+						<span class="work__item-num" data-speed="-700">/003</span>
+						<div class="work__item-img">
+							<img src="img/5.jpg" alt="5">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-400">
+						<span class="work__item-num" data-speed="-200">/004</span>
+						<div class="work__item-img">
+							<img src="img/6.jpg" alt="6">
+						</div>
+					</div> -->
+				</div>
+			</section>
+
+			<!-- div .serv -->
+			<section class="serv">
+				<div class="content">
+					<h2 class="section-title">servic<span class="stroke">es</span>
+						<span class="section-title__square"></span>
+					</h2>
+
+					<div class="serv__list">
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="500">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Développement web</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="600">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Intégration web</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="400">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/UI-UX Design</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="400">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Maquette</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="800">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Web Design</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="600">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/E-commerce</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- div .footer -->
+		<footer class="footer">
+			<div class="footer__div">
+				<span data-speed="-300">à</span>
+				<span data-speed="100"></span>
+				<span data-speed="300">b</span>
+				<span data-speed="-300">i</span>
+				<span data-speed="350">e</span>
+				<span data-speed="200">n</span>
+				<span data-speed="-310">t</span>
+				<span data-speed="200">ô</span>
+				<span data-speed="-340">t</span>
+				<span data-speed="-100"></span>
+				<span data-speed="300">👋</span>
+			</div>
+		</footer>
+	</div>
+	<!-- /div .wrapp END -->
+	<script src="js/splitting.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script src="js/luxy.js"></script>
+	<script src="js/js.js"></script>
+	<script>AOS.init();</script>
+	<script>
+		var typingEffect = new Typed(".multiText",{
+            strings : ["développeur web front-end","designer web","freelance"],
+            loop : true,
+            typeSpeed : 50,
+            backSpeed : 80,
+            backDelay : 1500
+        })
+
+		const text = document.querySelector('.text-rounded p');
+        text.innerHTML = text.innerText.split('').map(
+            (char,i) =>
+            `<span style="transform:rotate(${i * 8.3}deg)">${char}</span>`
+        ).join('');
+	</script>
 </body>
+
 </html>
