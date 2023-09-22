@@ -179,3 +179,89 @@ button:hover {
 .swal-button, .swal-button:not([disabled]):hover {
   background-color: #a4a4a1;
 }
+
+@media screen and (max-width: 1047px) {
+  #contact .title-contact {
+    font-size: 5rem;  
+  }
+  .title-presentation {
+    font-size: 2.6rem;
+  }
+  section#contact .container p , section#contact .container b{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .header-nav {
+    padding: 20px;
+  }
+  .logo img {
+   width: 80px;
+   height: 80px;
+}
+.contact-btn {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #FCF7FF;
+} 
+  #contact .title-contact {
+    font-size: 4rem;  
+  }
+  .title-presentation {
+    font-size: 2rem;
+  }
+  section#contact .container p , section#contact .container b{
+    font-size: 16px;
+  }
+  section#contact .container {
+    margin-left: 20px;
+  }
+  section#contact .container form {
+    width: 80%;
+  } 
+}
+@media screen and (max-width: 591px) {
+  #contact .title-contact {
+    font-size: 3.2rem;  
+  }
+  .title-presentation {
+    font-size: 1.7rem;
+  }
+  section#contact .container p , section#contact .container b{
+    font-size: 13px;
+  }
+  section#contact .container {
+    margin-left: 20px;
+  }
+  section#contact .container form {
+    flex-direction: column;
+    width: 80%;
+  }
+  section#contact .container form input {
+    width: 80%; 
+  }  
+}
+@media screen and (max-width: 447px) {
+  #contact .title-contact {
+    font-size: 2.5rem;  
+  }
+  .title-presentation {
+    font-size: 1.2rem;
+  }
+  section#contact .container p , section#contact .container b{
+    font-size: 12px;
+  }
+  section#contact .container {
+    margin-left: 20px;
+  }
+  section#contact .container form {
+    flex-direction: column;
+    width: 80%;
+  }
+  section#contact .container form input {
+    width: 80%; 
+  }
+  ::placeholder {
+    font-size: 10px;
+  }  
+}
