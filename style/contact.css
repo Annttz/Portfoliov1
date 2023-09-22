@@ -181,6 +181,9 @@ button:hover {
 }
 
 @media screen and (max-width: 1047px) {
+  body {
+    overflow: hidden auto;
+  }
   #contact .title-contact {
     font-size: 5rem;  
   }
