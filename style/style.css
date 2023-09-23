@@ -475,7 +475,7 @@ b {
     width: auto;
 }
 .about__txt {
-    padding: 70px;
+    padding: 40px 20px;
 }
 }
 @media screen and (max-width: 450px) {
@@ -489,15 +489,11 @@ b {
 .contact-btn {
 	font-size: 18px;
 }
-.header__marq-txt {
-    font-size: 15px;
-}
-.header__marq-star {
-    width: 20px;
-    height: 20px;
+.header__marq {
+    display: none;
 }
 .about__txt {
-    padding: 0 70px;
+    padding: 0 20px;
 }
 .section-title {
     font-size: 25px;
