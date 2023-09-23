@@ -269,10 +269,10 @@ section {
 	object-fit: cover;
 }
 .cv {
-	width: 22%;
+	width: 300px;
 	margin-top: 20px;
 	font-family: 'Rickson', sans-serif;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 /* benefits ********/
@@ -404,8 +404,38 @@ section {
 .footer__div span {
 	display: inline-block;
 }
-
+@media screen and (max-width: 1450px) {
+	.section-title {
+    font-size: 50px;
+}
+b {
+	font-size: 20px;
+}
+	.about__p {
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.section-title {
+    font-size: 40px;
+}
+b {
+	font-size: 17px;
+}
+	.about__p {
+		font-size: 20px;
+	}
+}
 @media screen and (max-width: 885px) {
+	.header {
+	padding: 0 ;
+	width: auto;
+	height: 80vh;
+	flex-wrap: wrap;
+}
+.hero-text {
+    height: 2vh;
+}
 	.header-nav {
     padding: 20px;
   }
@@ -417,25 +447,66 @@ section {
 	font-size: 18px;
 } 
 .title {
-	font-size: 3vw;
+	font-size: 3.5vw;
 }
 .title2 {
-	font-size: 2.2vw;
+	font-size: 2.8vw;
 }
 .hero-roles h2 {
-  	font-size: 1.5vw;
+  	font-size: 2.5vw;
+}
+.header__marq-txt {
+    font-size: 25px;
+}
+.header__marq-star {
+    width: 30px;
+    height: 30px;
+
 }
 }
-@media screen and (max-width: 700px) {
-.title {
-	font-size: 1.1em;
-	white-space: nowrap; 
+@media screen and (max-width: 780px) {
+.about__wrapp {
+    flex-direction: column;
 }
-.title2 {
-	font-size: 1.8vw;
+.about__img {
+    height: 100%;
 }
-.hero-roles h2 {
-  	font-size: 1.5vw;
+.about__img, .about__txt {
+    width: auto;
 }
+.about__txt {
+    padding: 70px;
+}
+}
+@media screen and (max-width: 450px) {
+	.header {
+	height: 40vh;
+
+}
+.hero-text {
+    height: 0vh;
+}
+.contact-btn {
+	font-size: 18px;
+}
+.header__marq-txt {
+    font-size: 15px;
+}
+.header__marq-star {
+    width: 20px;
+    height: 20px;
+}
+.about__txt {
+    padding: 0 70px;
+}
+.section-title {
+    font-size: 25px;
+}
+b {
+	font-size: 12px;
+}
+	.about__p {
+		font-size: 18px;
+	} 
 }
 
