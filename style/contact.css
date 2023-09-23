@@ -12,7 +12,16 @@
 
 body {
 	background: #1F1926;
-    overflow: hidden;
+}
+body::-webkit-scrollbar {
+    width: 16px;
+}
+body::-webkit-scrollbar-thumb {
+    height: 56px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: hsl(0,0%,67%);
 }
 .header-nav {
     display: flex;
@@ -84,7 +93,7 @@ section#contact {
 b {
 	color: #FFBBFF;
 	font-family: 'Rickson', sans-serif;
-	font-size: 20px;
+	font-size: 25px;
 
 }
 .title-presentation {
@@ -105,8 +114,9 @@ section#contact .container {
 }
 
 section#contact .container p {
-  font-size: 20px;
-  color: white;
+  font-size: 30px;
+  color: #DBD8EE;
+  font-family: 'Clash Display', sans-serif;
 }
 section#contact .container form {
   display: flex;
@@ -191,7 +201,7 @@ button:hover {
     font-size: 2.6rem;
   }
   section#contact .container p , section#contact .container b{
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -231,7 +241,7 @@ button:hover {
     font-size: 1.7rem;
   }
   section#contact .container p , section#contact .container b{
-    font-size: 13px;
+    font-size: 16px;
   }
   section#contact .container {
     margin-left: 20px;
@@ -252,7 +262,7 @@ button:hover {
     font-size: 1.2rem;
   }
   section#contact .container p , section#contact .container b{
-    font-size: 12px;
+    font-size: 14px;
   }
   section#contact .container {
     margin-left: 5px;
