@@ -407,6 +407,11 @@ section {
 .footer__div span {
 	display: inline-block;
 }
+@media screen and (max-height: 1060px) {
+section {
+	padding-top: 250px;
+}
+}
 @media screen and (max-width: 1510px) {
 	.benefits__num {
     	font-size: 30px;
@@ -498,6 +503,19 @@ b {
 .about__txt {
     padding: 40px 20px;
 }
+.about__txt {
+    padding: 40px 20px;
+}
+
+.content {
+padding: 20px;
+}
+.section-title, .skills-desc {
+    text-align: start;
+}
+.skills-desc { 
+	padding-top: 30px;
+}	
 .benefits {
 	padding-top: 400px;
 }
@@ -505,7 +523,7 @@ b {
     	font-size: 13px;
 	}
 	.benefits__item {
-	width: calc(50.33% - 20px);
+	width: calc(80.33% - 240px);
 }
 }
 @media screen and (max-width: 650px) {
@@ -526,7 +544,10 @@ b {
 	}
 	.wordpress {
     	font-size: 8px;
-	}	
+	}
+	.benefits__item {
+	width: calc(50.33% - 100px);
+}	
 }
 @media screen and (max-width: 450px) {
 	.header {
@@ -558,11 +579,14 @@ b {
 		font-size: 18px;
 	}
 	.skills-desc {
-	font-size: 16px;
+	font-size: 18px;
 	text-align: start;
 }
 .skills-desc b {
-	font-size: 12px;
+	font-size: 13px;
+}
+.benefits__item {
+	width: calc(70.33% - 150px);
 } 
 }
 
