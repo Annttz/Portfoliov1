@@ -130,18 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	portfolio();
 
 
-	serv
-	function serv() {
-		gsap.from('.serv__item-arrow', {
-			x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
-			scrollTrigger: {
-				trigger: '.serv__list',
-				start: 'top bottom',
-				scrub: 1.9
-			}
-		})
-	}
-	serv();
+	
 
 
 	//footer
