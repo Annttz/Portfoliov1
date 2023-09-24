@@ -276,12 +276,13 @@ section {
 	margin-top: 20px;
 	font-family: 'Rickson', sans-serif;
 	font-size: 15px;
+	text-transform: uppercase;
 }
 
 /* benefits ********/
 .benefits__list {
 	display: flex;
-	flex-wrap: wrap-reverse;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 40px;
 	width: 100%;
@@ -416,6 +417,10 @@ section {
 	.benefits__num {
     	font-size: 30px;
 	}
+	.work__item {
+    width: auto;
+	height: auto;
+}
 }
 @media screen and (max-width: 1450px) {
 	.section-title {
@@ -427,6 +432,16 @@ b {
 	.about__p {
 		font-size: 25px;
 	}
+	.serv__item-arrow {
+    width: 40px;
+    height: 40px;
+}
+.serv__item-txt {
+    font-size: 40px;
+}
+.footer__div {
+    font-size: 50px;
+}
 }
 @media screen and (max-width: 1162px) {
 	.skills-desc{
@@ -449,6 +464,16 @@ b {
 	.about__p {
 		font-size: 20px;
 	}
+	.serv__item-arrow {
+    width: 30px;
+    height: 30px;
+}
+.serv__item-txt {
+    font-size: 30px;
+}
+.footer__div {
+    font-size: 40px;
+}
 }
 @media screen and (max-width: 885px) {
 	.header {
@@ -489,6 +514,16 @@ b {
 .benefits__num {
     	font-size: 18px;
 	}
+	.serv__item-arrow {
+    width: 30px;
+    height: 30px;
+}
+.serv__item-txt {
+    font-size: 25px;
+}
+.footer__div {
+    font-size: 3.5vw;
+}
 }
 @media screen and (max-width: 780px) {
 .about__wrapp {
@@ -525,6 +560,9 @@ padding: 20px;
 	.benefits__item {
 	width: calc(80.33% - 240px);
 }
+.work__item-num {
+	font-size: 30px;
+}
 }
 @media screen and (max-width: 650px) {
 .content .section-title {
@@ -536,17 +574,38 @@ padding: 20px;
 .skills-desc b {
 	font-size: 15px;
 }
-	
+.projets-desc {
+	font-size: 20px;
+}
+.projets-desc b {
+	font-size: 15px;
+}
+.serv__item-arrow {
+    width: 20px;
+    height: 20px;
+}
+.serv__item-txt {
+    font-size: 18px;
+}
+.footer__div {
+    font-size: 3vw;
+}	
 }
 @media screen and (max-width: 500px) {
 .benefits__num {
     	font-size: 11px;
 	}
 	.wordpress {
-    	font-size: 8px;
+    	font-size: 9px;
 	}
 	.benefits__item {
 	width: calc(50.33% - 100px);
+}
+.work__item-num {
+	font-size: 20px;
+}
+.footer__div {
+    font-size: 2.5vw;
 }	
 }
 @media screen and (max-width: 450px) {
@@ -585,9 +644,36 @@ b {
 .skills-desc b {
 	font-size: 13px;
 }
+.benefits__list {
+	justify-content: start;
+	height: 80vh;
+}
 .benefits__item {
-	width: calc(70.33% - 150px);
+	width: calc(70.33% - 120px);
+}
+	.projets-desc {
+	font-size: 18px;
+	text-align: start;
+}
+.projets-desc b {
+	font-size: 13px;
+}
+.work__item {
+	height: auto;
+}
+.work__item-num {
+	font-size: 10px;
+}
+.serv__item-arrow {
+    width: 15px;
+    height: 15px;
+}
+.serv__item-txt {
+    font-size: 12px;
 } 
+.footer__div {
+    font-size: 1.8vw;
+}
 }
 
 
