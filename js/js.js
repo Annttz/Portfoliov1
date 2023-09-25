@@ -74,14 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 			yPercent: 80
 		})
-		gsap.from('.about__img img', {
-			scrollTrigger: {
-				trigger: '.about',
-				start: 'top bottom',
-				scrub: 1.9
-			},
-			scale: 1.6
-		})
+		if (window.innerWidth > 768) {
+			gsap.from('.about__img img', {
+				scrollTrigger: {
+					trigger: '.about',
+					start: 'top bottom',
+					scrub: 1.9
+				},
+				scale: 1.6
+			})
+		}
 		gsap.to('.about__txt', {
 			scrollTrigger: {
 				trigger: '.about__wrapp',
@@ -129,7 +131,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	portfolio();
 
-
+	//serv
+	function serv() {
+		gsap.from('.serv__item-arrow', {
+			x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+			scrollTrigger: {
+				trigger: '.serv__list',
+				start: 'top bottom',
+				scrub: 1.9
+			}
+		})
+	}
+	serv();
 	
 
 

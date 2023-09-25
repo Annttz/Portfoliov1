@@ -571,6 +571,9 @@ padding: 20px;
 .projets-desc b {
 	font-size: 25px;
 }
+.serv__item-arrow  {
+	display: none;
+}
 }
 @media screen and (max-width: 650px) {
 .content .section-title {
