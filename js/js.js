@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const gsapSq = gsap.utils.toArray('.section-title__square');
 	gsapSq.forEach((gSq, i) => {
-		const rotat = gsap.from(gSq, 3, { rotation: 720 });
+		const rotat = gsap.from(gSq, 3, { rotation: 360 });
 		ScrollTrigger.create({
 			trigger: gSq,
 			animation: rotat,
