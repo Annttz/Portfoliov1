@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const gTl = gsap.timeline();
 	gTl.from(".title .char", 1, { opacity: 0, yPercent: 130, stagger: 0.04, ease: "back.out" });
-	gTl.from(".title-contact .char", 1, { opacity: 0, yPercent: 130, stagger: 0.04, ease: "back.out" });
 	gTl.from(".header__marq", 2, { opacity: 0, yPercent: 100, ease: "expo.out" }, "-=1.5");
 
 	const gsapSq = gsap.utils.toArray('.section-title__square');
