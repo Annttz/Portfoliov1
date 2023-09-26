@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 		}
 		footer();
+	let mm = gsap.matchMedia();
 	
 	function activerAnimation() {
 		//header
