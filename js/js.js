@@ -158,7 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		}
 	if (window.innerWidth >= 768) {
-    activerAnimation();
+		activerAnimation();
+		
 	}
 	window.addEventListener('resize', function() {
     // Obtenir la largeur actuelle de la fenêtre
@@ -169,7 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Désactiver ou détruire l'animation ScrollTrigger
         ScrollTrigger.getAll().forEach(trigger => {
             trigger.kill();
-        });
+		});
+		ScrollTrigger.refresh();
     } else {
         // Activer l'animation si la largeur est de 768 pixels ou plus
         activerAnimation();
@@ -177,3 +179,4 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 	ScrollTrigger.refresh();
 });
+ScrollTrigger.refresh();
