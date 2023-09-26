@@ -416,6 +416,11 @@ section {
 	padding-top: 250px;
 }
 }
+@media screen and (max-width: 1810px) {
+	.long-word {
+		font-size: 30px;
+	}
+}
 @media screen and (max-width: 1510px) {
 	.benefits__num {
     	font-size: 30px;
