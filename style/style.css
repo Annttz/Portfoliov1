@@ -642,7 +642,7 @@ padding: 20px;
     height: 0vh;
 }
 .contact-btn {
-	font-size: 18px;
+	font-size: 15px;
 }
 .header__marq {
     display: none;
@@ -699,7 +699,7 @@ b {
     font-size: 12px;
 }
 .footer {
-    height: 10vh;
+    height: auto;
 	padding-bottom: 150px;
 } 
 .footer__div {
