@@ -61,22 +61,22 @@ document.addEventListener("DOMContentLoaded", function () {
 				xPercent: 50
 			})
 		
-			// gsap.to('.header__marq-wrapp', {
-			// 	scrollTrigger: {
-			// 		trigger: '.header',
-			// 		start: 'top top',
-			// 		scrub: 1.9
-			// 	},
-			// 	xPercent: -50
-			// })
-			// gsap.to('.header__marq-star img', {
-			// 	scrollTrigger: {
-			// 		trigger: '.header',
-			// 		start: 'top top',
-			// 		scrub: 1.9
-			// 	},
-			// 	rotate: -720
-			// })
+			gsap.to('.header__marq-wrapp', {
+				scrollTrigger: {
+					trigger: '.header',
+					start: 'top top',
+					scrub: 1.9
+				},
+				xPercent: -50
+			})
+			gsap.to('.header__marq-star img', {
+				scrollTrigger: {
+					trigger: '.header',
+					start: 'top top',
+					scrub: 1.9
+				},
+				rotate: -720
+			})
 		}
 		header();
 
