@@ -295,6 +295,8 @@
 			</div>
 		</footer>
 	</div>
+	<div class="cursor"></div>
+    <div class="cursor2"></div>
 	<!-- /div .wrapp END -->
 	<script src="js/splitting.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -303,6 +305,12 @@
 	<script src="js/js.js"></script>
 	<script>AOS.init();</script>
 	<script>
+		var cursor = document.querySelector('.cursor');
+        var cursor2 = document.querySelector('.cursor2');
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText ="left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+
 		var typingEffect = new Typed(".multiText",{
             strings : ["développeur web front-end","designer web","freelance"],
             loop : true,
