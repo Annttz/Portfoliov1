@@ -669,7 +669,7 @@ b {
 	height: 30vh;
 }
 .long-word {
-	font-size: 8px;
+	font-size: 2.1vw;
 }
 .benefits__item {
 	width: calc(70.33% - 120px);
