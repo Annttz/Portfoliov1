@@ -43,6 +43,9 @@ b {
 	font-family: 'Rickson', sans-serif;
 	font-size: 25px;
 }
+i {
+	color: #DBD8EE;
+}
 .btn {
   border-radius: 9999999px;
   display: flex;
@@ -428,6 +431,9 @@ b {
 	.about__p {
 		font-size: 25px;
 	}
+	.long-word {
+		font-size: 23px;
+	}
 	.work__item-num {
     	font-size: 30px;
 	}
@@ -448,6 +454,9 @@ b {
 }
 	.benefits__num {
     	font-size: 25px;
+	}
+	.long-word {
+		font-size: 19px;
 	}
 	.work__item {
 		width: auto;
@@ -516,10 +525,13 @@ b {
     width: 30px;
     height: 30px;
 }
+
 .benefits__num {
     	font-size: 18px;
 	}
-
+.long-word {
+		font-size: 15px;
+	}
 .serv__item-txt {
     font-size: 25px;
 }
@@ -538,11 +550,9 @@ b {
     width: auto;
 }
 .about__txt {
-    padding: 40px 20px;
+    padding: 150px 20px;
 }
-.about__txt {
-    padding: 40px 20px;
-}
+
 
 .content {
 padding: 20px;
@@ -556,10 +566,7 @@ padding: 20px;
 .benefits {
 	padding-top: 400px;
 }
-.wordpress {
-    	font-size: 13px;
-	}
-	.benefits__item {
+.benefits__item {
 	width: calc(80.33% - 240px);
 }
 .work__item-num {
@@ -572,7 +579,8 @@ padding: 20px;
 	font-size: 25px;
 }
 .serv__item-arrow  {
-	display: none;
+	width: 20px;
+    height: 20px;
 }
 }
 @media screen and (max-width: 650px) {
@@ -584,6 +592,9 @@ padding: 20px;
 }
 .skills-desc b {
 	font-size: 15px;
+}
+.long-word {
+	font-size: 12px;
 }
 .projets-desc {
 	font-size: 20px;
@@ -607,9 +618,9 @@ padding: 20px;
 .benefits__num {
     	font-size: 11px;
 	}
-	.wordpress {
-    	font-size: 9px;
-	}
+	.long-word {
+	font-size: 9px;
+}
 	.benefits__item {
 	width: calc(50.33% - 100px);
 }
@@ -635,7 +646,7 @@ padding: 20px;
 	padding-top: 50px;
 }
 .about__txt {
-    padding: 20px;
+    padding: 100px 20px;
 }
 .section-title {
     font-size: 25px;
@@ -655,7 +666,10 @@ b {
 }
 .benefits__list {
 	justify-content: start;
-	height: 80vh;
+	height: 30vh;
+}
+.long-word {
+	font-size: 9px;
 }
 .benefits__item {
 	width: calc(70.33% - 120px);
