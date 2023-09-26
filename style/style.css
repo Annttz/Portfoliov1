@@ -700,6 +700,7 @@ b {
 }
 .footer {
     height: 10vh;
+	padding-bottom: 150px;
 } 
 .footer__div {
     letter-spacing: 5px;
