@@ -157,23 +157,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 		}
-// 	if (window.innerWidth >= 768) {
-//     activerAnimation();
-// 	}
-// 	window.addEventListener('resize', function() {
-//     // Obtenir la largeur actuelle de la fenêtre
-//     var largeurFenetre = window.innerWidth;
+	if (window.innerWidth >= 768) {
+    activerAnimation();
+	}
+	window.addEventListener('resize', function() {
+    // Obtenir la largeur actuelle de la fenêtre
+    var largeurFenetre = window.innerWidth;
 
-//     // Vérifier si la largeur est inférieure à 768 pixels
-//     if (largeurFenetre < 768) {
-//         // Désactiver ou détruire l'animation ScrollTrigger
-//         ScrollTrigger.getAll().forEach(trigger => {
-//             trigger.kill();
-//         });
-//     } else {
-//         // Activer l'animation si la largeur est de 768 pixels ou plus
-//         activerAnimation();
-//     }
-	// });
+    // Vérifier si la largeur est inférieure à 768 pixels
+    if (largeurFenetre < 768) {
+        // Désactiver ou détruire l'animation ScrollTrigger
+        ScrollTrigger.getAll().forEach(trigger => {
+            trigger.kill();
+        });
+    } else {
+        // Activer l'animation si la largeur est de 768 pixels ou plus
+        activerAnimation();
+    }
+	});
 	ScrollTrigger.refresh();
 });
