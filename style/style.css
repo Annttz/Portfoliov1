@@ -697,9 +697,12 @@ b {
 }
 .serv__item-txt {
     font-size: 12px;
+}
+.footer {
+    height: 10vh;
 } 
 .footer__div {
-    letter-spacing: 7px;
+    letter-spacing: 5px;
 }
 }
 
