@@ -310,7 +310,7 @@
 		const titles = gsap.utils.toArray('h3')
 		const tl = gsap.timeline({
   			repeat: -1,
-  			repeatDelay: 0.2,
+  			repeatDelay: 0.1,
 		});
 
 		
@@ -331,6 +331,86 @@
 						stagger:.02
 					},"<1.5")
 			});
+
+			let mm = gsap.matchMedia();
+			mm.add("(max-width: 1163px)", () => { 
+				const titlee = gsap.utils.toArray('h3')
+				const tl3 = gsap.timeline({
+  					repeat: -1,
+  					repeatDelay: 0.1,
+				});
+
+				titlee.forEach(title => {
+				const splitTitle = new SplitType(title);
+				tl3
+					.from(splitTitle.chars, {
+						opacity:0,
+						y:60,
+						rotateX:-90,
+						stagger:.02
+					},"<")
+
+					.to(splitTitle.chars, {
+						opacity:0,
+						y:-60,
+						rotateX:90,
+						stagger:.02
+					},"<1.5")
+			});
+			})
+
+			mm.add("(max-width: 700px)", () => { 
+				const titleee = gsap.utils.toArray('h3')
+				const tl4 = gsap.timeline({
+  					repeat: -1,
+  					repeatDelay: 0.1,
+				});
+
+				titleee.forEach(title => {
+				const splitTitle = new SplitType(title);
+				tl4
+					.from(splitTitle.chars, {
+						opacity:0,
+						y:40,
+						rotateX:-90,
+						stagger:.02
+					},"<")
+
+					.to(splitTitle.chars, {
+						opacity:0,
+						y:-40,
+						rotateX:90,
+						stagger:.02
+					},"<1.5")
+			});
+			})
+			
+			mm.add("(max-width: 450px)", () => { 
+				const title = gsap.utils.toArray('h3')
+				const tl2 = gsap.timeline({
+  					repeat: -1,
+  					repeatDelay: 0.1,
+				});
+
+				title.forEach(title => {
+				const splitTitle = new SplitType(title);
+				tl2
+					.from(splitTitle.chars, {
+						opacity:0,
+						y:30,
+						rotateX:-90,
+						stagger:.02
+					},"<")
+
+					.to(splitTitle.chars, {
+						opacity:0,
+						y:-30,
+						rotateX:90,
+						stagger:.02
+					},"<1.5")
+			});
+			})
+		
 	</script>
 </body>
 </html>
