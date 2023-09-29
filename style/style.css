@@ -200,10 +200,20 @@ section {
   gap: 1rem;
   height: 40vh;
 }
-.hero-roles h2 {
-	color: var(--pr-color);
-  	font-size: 1.5vw;
-  	text-transform: uppercase;
+.hero-roles {	
+	padding-top: 100px;	
+}
+.stroke {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--pr-color);
+}
+.text-wrapper h3{
+	font-size: 1.5vw;
+	text-align: center;
+	color: #FFBBFF;
+	line-height: 0;
+	margin: 0;
+	text-transform: uppercase;
 }
 .multiText {
   color: #FFBBFF;

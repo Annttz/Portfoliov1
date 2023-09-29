@@ -15,9 +15,9 @@
 	<link href="https://fonts.cdnfonts.com/css/rickson" rel="stylesheet">	
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<link rel="stylesheet" href="style/normalize.css">
 	<link rel="stylesheet" href="style/style.css">
+	<script src="https://unpkg.com/split-type"></script>
 </head>
 
 <body>
@@ -37,7 +37,11 @@
 				<h1 class="title" data-splitting><span class="title_paralax stroke">HEY, JE SUIS</span> <span> ANTOINE GILMAN</span></h1>
 				<h1 class="title2" data-splitting data-aos="fade-down" data-aos-duration="900" data-aos-delay="700"><span class="title_paralax stroke">MAIS VOUS POUVEZ M'APPELER</span> <span> ANTZZ</span></h1>
 				<div class="hero-roles">
-                    <h2>Je suis <span class="multiText"></span></h2>
+					<div class="text-wrapper">
+						<h3><span class="stroke">je suis</span> développeur web front-end</h3>
+						<h3><span class="stroke">je suis</span> web designer</h3>
+						<h3><span class="stroke">je suis</span> freelance</h3>
+					</div>
                 </div>
 			</div>
 		
@@ -303,14 +307,30 @@
 	<script src="js/js.js"></script>
 	<script>AOS.init();</script>
 	<script>
-		var typingEffect = new Typed(".multiText",{
-            strings : ["développeur web front-end","designer web","freelance"],
-            loop : true,
-            typeSpeed : 50,
-            backSpeed : 80,
-            backDelay : 1500
-        })
+		const titles = gsap.utils.toArray('h3')
+		const tl = gsap.timeline({
+  			repeat: -1,
+  			repeatDelay: 1,
+		});
+
+		
+			titles.forEach(title => {
+				const splitTitle = new SplitType(title);
+				tl
+					.from(splitTitle.chars, {
+						opacity:0,
+						y:80,
+						rotateX:-90,
+						stagger:.02
+					},"<")
+
+					.to(splitTitle.chars, {
+						opacity:0,
+						y:-80,
+						rotateX:90,
+						stagger:.02
+					},"<1.5")
+			});
 	</script>
 </body>
-
 </html>
