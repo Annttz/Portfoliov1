@@ -205,6 +205,78 @@ document.addEventListener("DOMContentLoaded", function () {
 		serv();
 	})
 
+	let mm3 = gsap.matchMedia();
+	mm3.add("(max-width: 450px)", () => {
+		//header
+		function header() {
+			gsap.to('.title_paralax', {
+				scrollTrigger: {
+					trigger: '.header',
+					start: 'top top',
+					scrub: 1.9
+				},
+				yPercent: -150
+			})
+			gsap.to('.header .stroke', {
+				scrollTrigger: {
+					trigger: '.header',
+					start: 'top top',
+					scrub: 1.9
+				},
+				xPercent: 50
+			})
 
+			gsap.to('.header__marq-wrapp', {
+				scrollTrigger: {
+					trigger: '.header',
+					start: 'top top',
+					scrub: 1.9
+				},
+				xPercent: -50
+			})
+			gsap.to('.header__marq-star img', {
+				scrollTrigger: {
+					trigger: '.header',
+					start: 'top top',
+					scrub: 1.9
+				},
+				rotate: -720
+			})
+		}
+		header();
+
+
+		
+
+
+		//benefits
+		function benefits() {
+			gsap.from('.benefits__num', {
+				x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+				scrollTrigger: {
+					trigger: '.benefits__list',
+					start: 'top bottom',
+					scrub: 1.9
+				}
+			})
+		}
+		benefits();
+
+
+		//portfolio
+		function portfolio() {
+
+			gsap.from('.work__item-img img', {
+				scale: 1.6,
+				scrollTrigger: {
+					trigger: '.work__wrapp',
+					start: 'top bottom',
+					scrub: 1.9
+				}
+			})
+		}
+		portfolio();
+
+	})
 
 })
