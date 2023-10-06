@@ -24,10 +24,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-	// let mm = gsap.matchMedia();
-	// //footer
-	// mm.add("(min-width: 450px)", () => {
+	let mm = gsap.matchMedia();
+	//footer
+	mm.add("(max-width: 450px)", () => {
 		function footer() {
+			gsap.from('.footer__div span', {
+				y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+				opacity: 0,
+				scrollTrigger: {
+					trigger: '.footer',
+					start: 'top bottom',
+					end: 'bottom bottom',
+					scrub: 4
+				}
+			})
+		}
+		footer();
+	});
+	mm.add("(min-width: 450px)", () => {
+		function footer2() {
 			gsap.from('.footer__div span', {
 				y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
 				opacity: 0,
@@ -39,8 +54,41 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			})
 		}
-		footer();
-	// });
+		footer2();
+	});
+	
+	mm.add("(max-width: 450px)", () => {
+		function about() {
+			gsap.from('.about__img', {
+				scrollTrigger: {
+					trigger: '.about',
+					start: 'top bottom',
+					scrub: 1.9
+				},
+				yPercent: 80
+			})
+
+			gsap.from('.about__img img', {
+				scrollTrigger: {
+					trigger: '.about',
+					start: 'top bottom',
+					scrub: 1.9
+				},
+				scale: 1.6
+			})
+		}
+		gsap.to('.about__txt', {
+			scrollTrigger: {
+				trigger: '.about__wrapp',
+				start: 'top bottom',
+				scrub: 1.9
+			},
+			yPercent: 50
+		})
+
+		about();
+	});
+
 
 	let mm2 = gsap.matchMedia();
 	mm2.add("(min-width: 767px)", () => {
