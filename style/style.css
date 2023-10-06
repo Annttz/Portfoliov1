@@ -9,9 +9,9 @@
 ::selection {
   background: #606887;
 }
-html {
+/* html {
 	scroll-behavior: smooth;
-}
+} */
 * {
 	box-sizing: border-box;
 	font-family: 'Syne', sans-serif;
