@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const gTl = gsap.timeline();
 	gTl.from(".title .char", 1, { opacity: 0, yPercent: -130, stagger: 0.04, ease: "back.out" });
-	gTl.from(".title2 .char", 1, { opacity: 0, yPercent: 130, stagger: 0.01, ease: "back.out" });
-	// gTl.from(".header__marq", 2, { opacity: 0, yPercent: 100, ease: "expo.out" }, "-=1.5");
 
 	const gsapSq = gsap.utils.toArray('.section-title__square');
 	gsapSq.forEach((gSq, i) => {
@@ -24,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	
 
-	let mm = gsap.matchMedia();
-	//footer
-	mm.add("(min-width: 450px)", () => {
+
+	// let mm = gsap.matchMedia();
+	// //footer
+	// mm.add("(min-width: 450px)", () => {
 		function footer() {
 			gsap.from('.footer__div span', {
 				y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
@@ -42,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 		}
 		footer();
-	});
-	
+	// });
+
 	let mm2 = gsap.matchMedia();
 	mm2.add("(min-width: 767px)", () => {
 		//header
@@ -64,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				},
 				xPercent: 50
 			})
-		
+
 			gsap.to('.header__marq-wrapp', {
 				scrollTrigger: {
 					trigger: '.header',
@@ -113,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 			yPercent: 50
 		})
-	
+
 		about();
 
 
@@ -160,5 +158,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	})
 
 
-		
+
 })
