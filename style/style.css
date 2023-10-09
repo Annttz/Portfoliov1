@@ -709,8 +709,9 @@ padding: 20px;
 @media screen and (max-width: 450px) {
 	.header {
 	height: 100vh;
-
+    padding: 150px 0;
 }
+
 .title {
 	font-size: 14px;
 }
