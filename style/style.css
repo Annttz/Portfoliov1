@@ -20,7 +20,7 @@
 	  z-index: 5;
 }
 .wrapp:hover ~ .cursor {
-      transform:  scale(3);
+      transform:  scale(2.5);
 }
 html {
 	scroll-behavior: smooth;

@@ -22,7 +22,7 @@
     <title>Antoine Gilman | Contact</title>
 </head>
 <body>
-
+    <div class="hover-this">
    <div class="header-nav">
 			<a href="index.html" class="logo">
 				<img src="./img/logo.png" alt="logo">   
@@ -52,10 +52,39 @@
                 </form>
             </div>
         </div>
+        </div>
+        <div class="cursor"></div>
     <script src="/js/contact.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script>
+        (function () {
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+    
+      window.addEventListener('mousemove', editCursor);
+
+})();
         const myText = new SplitType('.title-contact')
 
         gsap.to('.char', {

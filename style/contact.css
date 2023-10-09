@@ -1,6 +1,19 @@
 ::selection {
   background: #606887;
 }
+.cursor {
+      pointer-events: none;
+      position: fixed;
+      padding: 0.8rem;
+      background-color: #fff;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      transition: transform 0.3s ease;
+	  z-index: 5;
+}
+.hover-this:hover ~ .cursor {
+      transform:  scale(2.5);
+}
 * {
 	box-sizing: border-box;
 	font-family: 'Syne', sans-serif;
@@ -204,6 +217,11 @@ button:hover {
   section#contact .container p , section#contact .container b{
     font-size: 20px;
   }
+}
+@media screen and (max-width: 970px) {
+.cursor {
+		display: none;
+}
 }
 @media screen and (max-width: 770px) {
   .header-nav {
