@@ -250,7 +250,7 @@ text {
   font-variant-ligatures: none;
   fill: white;
   letter-spacing: 20px;
-  animation: rotate 10s linear infinite;
+  animation: rotate 8s linear infinite;
   transform-origin: 250px 250px;
 }
 
