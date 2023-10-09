@@ -555,6 +555,9 @@ b {
 }
 }
 @media screen and (max-width: 969px) {
+	.cursor {
+		display: none;
+	}
 .text-wrapper h3{
 	font-size: 1.3rem;
 	}
