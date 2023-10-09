@@ -111,8 +111,9 @@ section {
 .header {
 	position: relative;
 	display: flex;
-	padding: 0 70px;
+	padding: 250px 0px;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	width: 100%;
 	height: 100vh;
@@ -198,7 +199,7 @@ section {
   flex-direction: column;
   text-align: center;
   gap: 1rem;
-  height: 40vh;
+  height: 60vh;
 }
 .hero-roles {
     padding-top: 100px;  
@@ -215,7 +216,36 @@ section {
 	margin: 0;
 	text-transform: uppercase;
 }
+svg {
+  max-width: 80vmin;
+  padding-top: 100px;
+  
+  &:hover .textcircle {
+    transform: scale(1.2) rotate(90deg);
+  }
+}
 
+.textcircle {
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+  transform-origin: 250px 250px;
+}
+
+text {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-variant-ligatures: none;
+  fill: white;
+  letter-spacing: 20px;
+  animation: rotate 10s linear infinite;
+  transform-origin: 250px 250px;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .section-title {
 	position: relative;
 	margin: 0;
@@ -515,10 +545,9 @@ b {
 }
 @media screen and (max-width: 885px) {
 	.header {
-	padding: 0 ;
+	padding: 250px 0 ;
 	width: auto;
 	height: 80vh;
-	flex-wrap: wrap;
 }
 .hero-text {
     height: 2vh;
@@ -541,6 +570,9 @@ b {
 }
 .hero-roles h2 {
   	font-size: 2.5vw;
+}
+svg {
+    padding-top: 150px;
 }
 .header__marq-txt {
     font-size: 25px;
@@ -660,14 +692,17 @@ padding: 20px;
 }
 @media screen and (max-width: 450px) {
 	.header {
-	height: 60vh;
+	height: 70vh;
 
+}
+.title {
+	font-size: 14px;
 }
 .hero-roles {
     padding-top: 50px;
 }
 .text-wrapper h3{
-	font-size: 0.65rem;
+	font-size: 10px;
 	}
 .contact-btn {
 	font-size: 15px;
