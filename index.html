@@ -26,10 +26,10 @@
 	<div id="luxy" class="wrapp">
 
 		<div class="header-nav">
-			<a href="index.html" class="logo">
+			<a href="index.html" class="logo hover-this">
 				<img src="./img/logo.png" alt="logo">   
 			</a>
-			<a href="contact.html"><span class="btn contact-btn">contact</span></a>
+			<a href="contact.html" class="hover-this"><span class="btn contact-btn">contact</span></a>
 		</div>
 		<!-- div .header -->
 		<header class="header">
@@ -52,7 +52,7 @@
 						<g class="textcircle">
 							<text textLength="942">
 							<textPath xlink:href="#textcircle" aria-label="SCROLL" textLength="942">
-								SCROLL ➔ | SCROLL ➔ |&#160;
+								SCROLL ➔  SCROLL ➔  SCROLL ➔ &#160;
 							</textPath>
 							</text>
 						</g>
@@ -314,6 +314,7 @@
 			</div>
 		</footer>
 	</div>
+	<div class="cursor"></div>
 	<!-- /div .wrapp END -->
 	<script src="js/splitting.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -322,6 +323,34 @@
 	<script src="js/js.js"></script>
 	<script>AOS.init();</script>
 	<script>
+		(function () {
+	  const link = document.querySelectorAll('.hover-this');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+    
+      window.addEventListener('mousemove', editCursor);
+
+})();
 		const titles = gsap.utils.toArray('h3')
 		const tl = gsap.timeline({
   			repeat: -1,

@@ -9,6 +9,22 @@
 ::selection {
   background: #606887;
 }
+.hover-this {
+      transition: all 0.3s ease;
+}
+.cursor {
+      pointer-events: none;
+      position: fixed;
+      padding: 0.8rem;
+      background-color: #fff;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+      transition: transform 0.3s ease;
+	  z-index: 5;
+}
+.wrapp:hover ~ .cursor {
+      transform:  scale(3);
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -572,6 +588,7 @@ b {
   	font-size: 2.5vw;
 }
 svg {
+    max-width: 80vmin;
     padding-top: 150px;
 }
 .header__marq-txt {
