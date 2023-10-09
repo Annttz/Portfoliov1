@@ -9,9 +9,6 @@
 ::selection {
   background: #606887;
 }
-.hover-this {
-      transition: all 0.3s ease;
-}
 .cursor {
       pointer-events: none;
       position: fixed;
