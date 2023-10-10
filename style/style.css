@@ -789,6 +789,7 @@ b {
 @media screen and (max-height: 667px) {
 	.header {
 	height: 90vh;
+	padding-top: 200px;
 }
 }
 @media screen and (max-width: 420px) {
