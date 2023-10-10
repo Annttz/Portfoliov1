@@ -551,12 +551,8 @@ b {
 @media screen and (max-width: 885px) {
 	.header {
 	padding: 250px 0 ;
-	width: auto;
-	height: 80vh;
 }
-.hero-text {
-    height: 2vh;
-}
+
 	.header-nav {
     padding: 20px;
   }
@@ -573,11 +569,12 @@ b {
 .title2 {
 	font-size: 2.8vw;
 }
-.hero-roles h2 {
-  	font-size: 2.5vw;
+.circular-text {
+    font-size: 20px;
 }
-svg {
-    padding-top: 150px;
+
+.fa-arrow-down {
+    font-size: 35px;
 }
 .header__marq-txt {
     font-size: 25px;
@@ -697,12 +694,18 @@ padding: 20px;
 }
 @media screen and (max-width: 450px) {
 	.header {
-	height: 100vh;
+	height: 50vh;
     padding: 150px 0 0px;
 }
 
 .title {
-	font-size: 14px;
+	font-size: 40px;
+}
+.title .resp {
+	font-size: 23px;
+}
+.hero-text {
+    height: 20vh;
 }
 .hero-roles {
     padding-top: 50px;
@@ -712,6 +715,14 @@ padding: 20px;
 	}
 .contact-btn {
 	font-size: 15px;
+}
+.circular-text {
+	padding: 0px 0px;
+    font-size: 15px;
+}
+
+.fa-arrow-down {
+    font-size: 30px;
 }
 .header__marq {
     display: none;
@@ -775,5 +786,9 @@ b {
     letter-spacing: 5px;
 }
 }
-
+@media screen and (max-width: 420px) {
+.title {
+	font-size: 35px;
+}
+}
 
