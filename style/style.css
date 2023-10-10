@@ -786,6 +786,11 @@ b {
     letter-spacing: 5px;
 }
 }
+@media screen and (max-height: 667px) {
+	.header {
+	height: 90vh;
+}
+}
 @media screen and (max-width: 420px) {
 .title {
 	font-size: 35px;
