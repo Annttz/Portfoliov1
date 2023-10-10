@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="style/normalize.css">
 	<link rel="stylesheet" href="style/style.css">
 	<script src="https://unpkg.com/split-type"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="circletype.min.js"></script>
 </head>
 
 <body>
@@ -44,20 +46,16 @@
 					</div>
                 </div>				
 			</div>
-
-			<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
-  				<defs>
-    				<path id="textcircle" d="M250,400a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)" />
-  				</defs>
-				<g class="textcircle">
-					<text textLength="942">
-						<textPath xlink:href="#textcircle" aria-label="SCROLL" textLength="942">
-							SCROLL ➔  SCROLL ➔  SCROLL ➔ 
-						</textPath>
-					</text>
-				</g>
-			</svg>
-
+			<div class="test">
+			<div class="circular-text">
+            <span id="rotated"
+                > scroll • scroll • scroll • scroll • scroll 
+                • scroll • </span
+            >
+        	</div>
+        	<div class="arrow">
+            	<i class="fa-solid fa-arrow-down"></i>
+        	</div></div>
 
 				
 			<div class="header__marq">
@@ -323,6 +321,22 @@
 	<script src="js/js.js"></script>
 	<script>AOS.init();</script>
 	<script>
+		 const circleType = new CircleType(
+            document.getElementById("rotated")
+        ).radius(80);
+
+        $(window).scroll(function() {
+            var offset = $(window).scrollTop();
+            offset = offset * 0.4;
+
+            $(".circular-text").css({
+                "-moz-transform": "rotate(" + offset + "deg)",
+                "-webkit-transform": "rotate(" + offset + "deg)",
+                "-o-transform": "rotate(" + offset + "deg)",
+                "-ms-transform": "rotate(" + offset + "deg)",
+                transform: "rotate(" + offset + "deg)"
+            });
+        });
 		(function () {
       const cursor = document.querySelector('.cursor');
 
