@@ -231,22 +231,20 @@ section {
 }
 .circular-text {
 	padding: 100px 0px;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
     transition: 0.5s ease-out;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
 }
 .arrow {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
 }
 
 .fa-arrow-down {
     font-size: 40px;
-    color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255,0.7);
 }
 .section-title {
 	position: relative;
