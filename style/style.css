@@ -232,7 +232,7 @@ section {
 .circular-text {
 	padding: 100px 0px;
     color: rgba(255, 255, 255, 0);
-    font-size: 20px;
+    font-size: 18px;
     transition: 0.5s ease-out;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
 }
