@@ -470,6 +470,10 @@ section {
 	}
 }
 @media screen and (max-width: 1450px) {
+	.circular-text {
+	
+    font-size: 15px;
+}
 	.section-title {
     font-size: 50px;
 }
@@ -570,7 +574,7 @@ b {
 	font-size: 2.8vw;
 }
 .circular-text {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .fa-arrow-down {
@@ -717,8 +721,7 @@ padding: 20px;
 	font-size: 15px;
 }
 .circular-text {
-	
-    font-size: 12.9px;
+    font-size: 10px;
 }
 
 .fa-arrow-down {
