@@ -36,8 +36,7 @@ html {
 
 body {
 	background: #1F1926;
-	background-image: url(../img/nnnoise\ \(1\).svg);
-	
+	background-image: url(../img/nnnoise\ \(1\).svg);	
 }
 body::-webkit-scrollbar {
     width: 16px;
@@ -696,6 +695,12 @@ padding: 20px;
 }	
 }
 @media screen and (max-width: 450px) {
+	body {
+	background: #1F1926;
+}
+	.name-logo {
+		font-size: 24px;
+	}
 	.header {
 	height: 70vh;
     padding: 150px 0 0px;
