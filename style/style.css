@@ -36,6 +36,8 @@ html {
 
 body {
 	background: #1F1926;
+	background-image: url(../img/nnnoise\ \(1\).svg);
+	
 }
 body::-webkit-scrollbar {
     width: 16px;
@@ -112,9 +114,8 @@ section {
     padding-left: 4.75rem;
     padding-right: 4.75rem;
 }
-.logo img {
-   width: 100px;
-   height: 100px;
+.name-logo {
+	color: white;
 }
 .contact-btn {
 	font-size: 25px;
@@ -404,7 +405,7 @@ section {
 .serv__item {
 	position: relative;
 	padding: 40px 0;
-	border-bottom: 1px solid #2f2e2e;
+	border-bottom: 1px solid #514e4e;
 }
 
 .serv__item-arrow {
